@@ -4,57 +4,130 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ennichi</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #fff8fb;
+      font-family: 'Montserrat', sans-serif;
+      background: #fff7fb;
       color: #333;
-      text-align: center;
     }
+
     header {
-      background: #ff7aa2;
+      background: linear-gradient(135deg, #ff6fa1, #ff9ec4);
       color: white;
-      padding: 40px 20px;
+      text-align: center;
+      padding: 60px 20px;
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 40px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background: white;
+      padding: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ff4f8b;
+      font-weight: 600;
+    }
+
     .container {
+      max-width: 900px;
+      margin: auto;
       padding: 20px;
     }
+
     .card {
       background: white;
-      margin: 15px auto;
-      padding: 15px;
-      max-width: 400px;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin: 15px 0;
+      padding: 20px;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+      color: #888;
     }
   </style>
 </head>
+
 <body>
 
 <header>
-  <h1>🏮 Ennichi 🏮</h1>
-  <p>Japán fesztivál játékok Magyarországon</p>
+  <h1>🏮 Ennichi</h1>
+  <p>Japán fesztivál élmény Magyarországon</p>
 </header>
+
+<nav>
+  <a href="#about">Rólunk</a>
+  <a href="#games">Játékok</a>
+  <a href="#gallery">Galéria</a>
+  <a href="#contact">Kapcsolat</a>
+</nav>
 
 <div class="container">
 
-  <div class="card">
-    <h2>🎈 Vízi Jojó Horgászat</h2>
-    <p>Kifogod a színes vízi jojókat egy papírhurokkal!</p>
+  <div id="about" class="card">
+    <h2>Üdvözlünk az Ennichi-n!</h2>
+    <p>
+      Az Ennichi egy igazi japán nyári fesztivál élményt hoz el Magyarországra.
+      Célunk, hogy megidézzük a matsurik vidám hangulatát, játékokkal és élményekkel.
+    </p>
   </div>
 
-  <div class="card">
-    <h2>🍭 Katanuki</h2>
-    <p>Óvatosan vágd ki a mintát a cukorlapból!</p>
+  <div id="games" class="card">
+    <h2>🎮 Játékok</h2>
+    <p>🎈 Super Ball horgászat</p>
+    <p>🍭 Radír Lottó</p>
+    <p>🎯 Shateki</p>
+    <p>🍬 Katanuki</p>
   </div>
 
-  <div class="card">
-    <h2>🩵 Radír Lottó</h2>
-    <p>Húzd le a sorsjegyet és nyerj aranyos radírokat!</p>
+  <div id="gallery" class="card">
+    <h2>📸 Galéria</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300x200" alt="">
+      <img src="https://via.placeholder.com/300x200" alt="">
+      <img src="https://via.placeholder.com/300x200" alt="">
+    </div>
+  </div>
+
+  <div id="contact" class="card">
+    <h2>📩 Kapcsolat</h2>
+    <p>Instagram: @ennichi_hu</p>
   </div>
 
 </div>
+
+<footer>
+  © Ennichi - Japán fesztivál élmény
+</footer>
 
 </body>
 </html>
