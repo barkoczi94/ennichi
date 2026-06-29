@@ -5,26 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ennichi</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
-      background: #fff7fb;
-      color: #333;
+      background: #ffffff;
+      color: #222;
     }
 
     header {
-      background: linear-gradient(135deg, #ff6fa1, #ff9ec4);
+      background: linear-gradient(135deg, #e6002d, #ff3b5c);
       color: white;
       text-align: center;
-      padding: 60px 20px;
+      padding: 70px 20px;
     }
 
     header h1 {
       margin: 0;
-      font-size: 40px;
+      font-size: 42px;
     }
 
     nav {
@@ -33,14 +33,18 @@
       gap: 20px;
       background: white;
       padding: 15px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-bottom: 2px solid #ffe5ea;
       flex-wrap: wrap;
     }
 
     nav a {
       text-decoration: none;
-      color: #ff4f8b;
+      color: #e6002d;
       font-weight: 600;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     .container {
@@ -52,9 +56,21 @@
     .card {
       background: white;
       margin: 15px 0;
-      padding: 20px;
+      padding: 22px;
       border-radius: 14px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-left: 6px solid #e6002d;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    .wb-stl-custom1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      font-weight: 700;
+      font-style: italic;
+      color: #e6002d;
+      text-align: center;
+      line-height: 1.2;
+      margin: 10px 0 20px 0;
     }
 
     .gallery {
@@ -68,32 +84,37 @@
       border-radius: 10px;
     }
 
+    .insta {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .insta a {
+      text-decoration: none;
+      color: #e6002d;
+      font-weight: 600;
+      font-size: 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
     footer {
       text-align: center;
       padding: 30px;
       font-size: 14px;
       color: #888;
     }
-    .wb-stl-custom1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 38px;
-  font-weight: 700;
-  font-style: italic;
-
-  color: #ff4f8b;
-
-  text-align: center;
-  line-height: 1.3;
-
-  margin: 20px 0;
-  padding: 0;
-
-  text-transform: capitalize;
-}
   </style>
 </head>
 
 <body>
+
+<header>
+  <h1>🏮 Ennichi</h1>
+  <p>Japán fesztivál élmény Magyarországon</p>
+</header>
+
 <nav>
   <a href="#about">Események</a>
   <a href="#gallery">Termékek</a>
@@ -104,28 +125,36 @@
 
   <div id="about" class="card">
     <h1 class="wb-stl-custom1">Üdvözlünk az Ennichi-n!</h1>
-    <p>
-      Az Ennichi nem csupán egy hely – ez egy igazi japán nyári fesztivál élménye Magyarországon!
-Szeretnénk megidézni azt a vidám, barátságos hangulatot, amit a tradicionális japán fesztiválok nyújtanak.
-Gyere, játssz velünk Super Ball halászatot, próbáld ki a radír-lottót, és vegyél részt édesség-nyereményhúzásainkon!
-Ha pedig kedveled az animéket, nálunk megtalálod a legmenőbb anime termékeket is.
-Nálunk mindenki otthon érezheti magát — legyen szó kisgyermekről vagy felnőttről, lelkes rajongóról vagy kíváncsiskodóról.
-Csatlakozz hozzánk, és éld át velünk a japán nyár varázsát!
-<div style="text-align:center; margin: 20px 0;">
-  📸 Kövess minket Instagramon: <a href="https://www.instagram.com/ennichi_hu/" target="_blank"
-     style="text-decoration:none; font-size:18px; color:#ff4f8b; font-weight:600;"><span style="font-size:28px;">📷</span>
-</a>
-</div>
-  </p>
-  </div>
 
+    <p>
+      Az Ennichi nem csupán egy hely – ez egy igazi japán nyári fesztivál élménye Magyarországon!<br><br>
+
+      Szeretnénk megidézni azt a vidám, barátságos hangulatot, amit a tradicionális japán fesztiválok nyújtanak.<br><br>
+
+      Gyere, játssz velünk Super Ball halászatot, próbáld ki a Radír Lottót, és vegyél részt édesség-nyereményhúzásainkon!<br><br>
+
+      Ha pedig kedveled az animéket, nálunk megtalálod a legmenőbb anime hangulatú játékokat is.<br><br>
+
+      Nálunk mindenki otthon érezheti magát — legyen szó kisgyermekről vagy felnőttről, lelkes rajongóról vagy kíváncsiskodóról.<br><br>
+
+      Csatlakozz hozzánk, és éld át velünk a japán nyár varázsát! 🌸
+    </p>
+
+    <div class="insta">
+      📸 Kövess minket Instagramon:<br><br>
+
+      <a href="https://www.instagram.com/ennichi_hu/" target="_blank">
+        📷 @ennichi_hu
+      </a>
+    </div>
+  </div>
 
   <div id="gallery" class="card">
     <h2>📸 Galéria</h2>
     <div class="gallery">
-      <img src="https://via.placeholder.com/300x200" alt="">
-      <img src="https://via.placeholder.com/300x200" alt="">
-      <img src="https://via.placeholder.com/300x200" alt="">
+      <img src="https://via.placeholder.com/300x200">
+      <img src="https://via.placeholder.com/300x200">
+      <img src="https://via.placeholder.com/300x200">
     </div>
   </div>
 
