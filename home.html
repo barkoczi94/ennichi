@@ -7,7 +7,8 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
   <!-- ÚJ: Lightbox CSS a nagyításhoz -->
-  <link href="https://cloudflare.com" rel="stylesheet">
+  <link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -52,29 +53,63 @@
   </div>
 
   <div id="gallery" class="card">
-    <h2>📸 Galéria</h2>
-    <div class="gallery">
-      <a href="Kepek/ennichi1.jpeg" data-lightbox="fesztival" data-title="Ennichi Fesztivál 1">
-        <img src="Kepek/ennichi1.jpeg" alt="Galéria kép">
-      </a>
-      <a href="Kepek/ennichi2.jpeg" data-lightbox="fesztival" data-title="Ennichi Fesztivál 2">
-        <img src="Kepek/ennichi2.jpeg" alt="Galéria kép">
-      </a>
-      <a href="Kepek/ennichi3.jpeg" data-lightbox="fesztival" data-title="Ennichi Fesztivál 3">
-        <img src="Kepek/ennichi3.jpeg" alt="Galéria kép">
-      </a>
-    </div>
-  </div>
 
-</div> <!-- Ez a hiányzó lezáró div a containernek -->
+    <h2>📸 Galéria</h2>
+
+    <div class="gallery">
+
+        <a href="Kepek/ennichi1.jpeg"
+           class="glightbox"
+           data-gallery="ennichi"
+           data-title="Ennichi Fesztivál">
+
+            <img src="Kepek/ennichi1.jpeg" alt="">
+        </a>
+
+        <a href="Kepek/ennichi2.jpeg"
+           class="glightbox"
+           data-gallery="ennichi"
+           data-title="Ennichi Fesztivál">
+
+            <img src="Kepek/ennichi2.jpeg" alt="">
+        </a>
+
+        <a href="Kepek/ennichi3.jpeg"
+           class="glightbox"
+           data-gallery="ennichi"
+           data-title="Ennichi Fesztivál">
+
+            <img src="Kepek/ennichi3.jpeg" alt="">
+        </a>
+
+    </div>
+
+</div>
 
 <footer>
   © Ennichi - Japán fesztivál élmény
 </footer>
 
-<!-- ÚJ: JavaScript fájlok a működéshez (jQuery és Lightbox) -->
-<script src="https://cloudflare.com"></script>
-<script src="https://cloudflare.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
+<script>
+const lightbox = GLightbox({
+    selector: '.glightbox',
+
+    loop: true,
+    touchNavigation: true,
+    keyboardNavigation: true,
+
+    zoomable: true,
+    draggable: true,
+
+    openEffect: 'zoom',
+    closeEffect: 'fade',
+    slideEffect: 'slide',
+
+    moreLength: 0
+});
+</script>
+  
 </body>
 </html>
