@@ -304,3 +304,18 @@ footer{
 .lb-nav a.lb-prev:hover::before, .lb-nav a.lb-next:hover::before {
     opacity: 1;
 }
+
+.goverlay{
+    backdrop-filter: blur(8px);
+    background: rgba(0,0,0,.8);
+}
+
+.gclose,
+.gnext,
+.gprev{
+    color:#fff;
+}
+
+.gslide-image img{
+    border-radius:15px;
+}
