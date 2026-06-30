@@ -89,3 +89,80 @@ footer{
     padding:30px;
     color:#888;
 }
+/* ======== Termékek ======== */
+
+.products{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:40px;
+
+}
+
+.product{
+
+background:white;
+border-radius:15px;
+overflow:hidden;
+
+box-shadow:0 6px 18px rgba(0,0,0,.08);
+
+transition:.25s;
+
+}
+
+.product:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 12px 25px rgba(0,0,0,.15);
+
+}
+
+.product img{
+
+width:100%;
+height:260px;
+
+object-fit:cover;
+
+display:block;
+
+}
+
+.product h3{
+
+padding:15px;
+
+font-size:17px;
+
+text-align:center;
+
+color:#b3002d;
+
+}
+
+.info-box{
+
+margin-top:50px;
+
+background:#fff0f3;
+
+padding:30px;
+
+border-radius:15px;
+
+text-align:center;
+
+border:2px solid #ffd5dd;
+
+}
+
+.info-box h2{
+
+color:#b3002d;
+
+margin-top:0;
+
+}
