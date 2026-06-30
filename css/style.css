@@ -163,7 +163,7 @@ footer{
 
 /* ÚJ SZABÁLY: Megnövelt betűméret és függőleges igazítás a szöveges menüpontoknak */
 .menu a {
-    font-size: 19px; 
+    font-size: 24px; 
     display: flex;
     align-items: center;
 }
