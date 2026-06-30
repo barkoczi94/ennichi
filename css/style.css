@@ -241,3 +241,25 @@ footer{
     }
 }
 
+/* ======== Galéria elrendezése ======== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;         /* A kis képek egységes méretűek lesznek, nem torzulnak */
+    border-radius: 8px;
+    cursor: pointer;           /* Mutatja a kurzorral, hogy rákattintható */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);    /* Rámutatáskor picit megmozdul */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
