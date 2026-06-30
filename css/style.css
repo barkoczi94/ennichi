@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    padding-top: 150px; /* MÓDOSÍTVA: Nagyobb hely a menünek, hogy ne takarjon ki semmit */
     font-family: 'Montserrat', sans-serif;
     background: #ffffff;
     color: #222;
@@ -93,7 +94,7 @@ footer{
     align-items:center;
 }
 
-/* MODOSÍTVA: 120x120px méretű kör alakú logó */
+/* 120x120px méretű kör alakú logó */
 .logo img {
     width: 120px;
     height: 120px;
@@ -124,12 +125,12 @@ footer{
     box-shadow:0 12px 25px rgba(0,0,0,.15);
 }
 
-/* MÓDOSÍTVA: Lekicsinyíti a képet levágás helyett */
+/* Lekicsinyíti a képet levágás helyett */
 .product img{
     width:100%;
     height:260px;
-    object-fit: contain;         /* Kivágás helyett belekicsinyíti a keretbe */
-    background-color: #fcfcfc;  /* Halvány háttér a kép mögötti üres részeknek */
+    object-fit: contain;
+    background-color: #fcfcfc;
     display:block;
 }
 
@@ -160,13 +161,14 @@ footer{
     margin:0 auto;
 }
 
-body{
-    margin:0;
-    padding-top:110px;
-    font-family:'Montserrat', sans-serif;
-    background:#fff;
-    color:#222;
+/* ÚJ SZABÁLY: Megnövelt betűméret és függőleges igazítás a szöveges menüpontoknak */
+.menu a {
+    font-size: 19px; 
+    display: flex;
+    align-items: center;
 }
+
+/* Törölve lett a felesleges, duplikált body szelektor innen a kód végéről */
 
 /* ======== Játékok ======== */
 .games-grid{
