@@ -6,9 +6,9 @@
   <title>Ennichi</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
-
+  <!-- ÚJ: Lightbox CSS a nagyításhoz -->
+  <link href="https://cloudflare.com" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  
 </head>
 
 <body>
@@ -53,16 +53,29 @@
 
   <div id="gallery" class="card">
     <h2>📸 Galéria</h2>
+    <!-- MÓDOSÍTVA: A képek linket kaptak, a data-lightbox="fesztival" köti össze őket egy csoportba, hogy lehessen lépkedni -->
     <div class="gallery">
-      <img src="https://via.placeholder.com/300x200">
-      <img src="https://via.placeholder.com/300x200">
-      <img src="https://via.placeholder.com/300x200">
+      <a href="Kepek/ennichi1.jpg" data-lightbox="fesztival" data-title="Ennichi Fesztivál 1">
+        <img src="Kepek/ennichi1.jpg" alt="Galéria kép">
+      </a>
+      <a href="Kepek/ennichi2.jpg" data-lightbox="fesztival" data-title="Ennichi Fesztivál 2">
+        <img src="Kepek/ennichi2.jpg" alt="Galéria kép">
+      </a>
+      <a href="Kepek/ennichi3.jpg" data-lightbox="fesztival" data-title="Ennichi Fesztivál 3">
+        <img src="Kepek/ennichi3.jpg" alt="Galéria kép">
+      </a>
     </div>
   </div>
+
+</div> <!-- Ez a hiányzó lezáró div a containernek -->
 
 <footer>
   © Ennichi - Japán fesztivál élmény
 </footer>
+
+<!-- ÚJ: JavaScript fájlok a működéshez (jQuery és Lightbox) -->
+<script src="https://cloudflare.com"></script>
+<script src="https://cloudflare.com"></script>
 
 </body>
 </html>
