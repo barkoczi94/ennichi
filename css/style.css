@@ -93,9 +93,10 @@ footer{
     align-items:center;
 }
 
+/* MODOSÍTVA: 120x120px méretű kör alakú logó */
 .logo img {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -104,87 +105,61 @@ footer{
 /* ======== Termékek ======== */
 
 .products{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-margin-top:40px;
-
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-top:40px;
 }
 
 .product{
-
-background:white;
-border-radius:15px;
-overflow:hidden;
-
-box-shadow:0 6px 18px rgba(0,0,0,.08);
-
-transition:.25s;
-
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+    transition:.25s;
 }
 
 .product:hover{
-
-transform:translateY(-6px);
-
-box-shadow:0 12px 25px rgba(0,0,0,.15);
-
+    transform:translateY(-6px);
+    box-shadow:0 12px 25px rgba(0,0,0,.15);
 }
 
+/* MÓDOSÍTVA: Lekicsinyíti a képet levágás helyett */
 .product img{
-
-width:100%;
-height:260px;
-
-object-fit:cover;
-
-display:block;
-
+    width:100%;
+    height:260px;
+    object-fit: contain;         /* Kivágás helyett belekicsinyíti a keretbe */
+    background-color: #fcfcfc;  /* Halvány háttér a kép mögötti üres részeknek */
+    display:block;
 }
 
 .product h3{
-
-padding:15px;
-
-font-size:17px;
-
-text-align:center;
-
-color:#b3002d;
-
+    padding:15px;
+    font-size:17px;
+    text-align:center;
+    color:#b3002d;
 }
 
 .info-box{
-
-margin-top:50px;
-
-background:#fff0f3;
-
-padding:30px;
-
-border-radius:15px;
-
-text-align:center;
-
-border:2px solid #ffd5dd;
-
+    margin-top:50px;
+    background:#fff0f3;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    border:2px solid #ffd5dd;
 }
 
 .info-box h2{
-
-color:#b3002d;
-
-margin-top:0;
-
+    color:#b3002d;
+    margin-top:0;
 }
 
 .menu{
     display:flex;
     gap:35px;
-
     margin:0 auto;
 }
+
 body{
     margin:0;
     padding-top:110px;
