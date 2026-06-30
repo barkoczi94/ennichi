@@ -263,3 +263,47 @@ footer{
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
+/* ======== LIGHTBOX NYILAK JAVÍTÁSA (Képek nélkül) ======== */
+
+/* Balra nyíl (Előző kép) */
+.lb-nav a.lb-prev {
+    background-image: none !important; /* Törli a hiányzó képfájl keresését */
+    opacity: 1 !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+.lb-nav a.lb-prev::before {
+    content: "❮"; /* CSS alapú szöveges nyíl ikonná alakítás */
+    font-size: 34px;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    visibility: visible;
+}
+
+/* Jobbra nyíl (Következő kép) */
+.lb-nav a.lb-highlighter, .lb-nav a.lb-next {
+    background-image: none !important; /* Törli a hiányzó képfájl keresését */
+    opacity: 1 !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+.lb-nav a.lb-next::before {
+    content: "❯"; /* CSS alapú szöveges nyíl ikonná alakítás */
+    font-size: 34px;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    visibility: visible;
+}
+
+/* A nyilak csak akkor villanjanak fel erősebben, ha fölé viszed az egeret */
+.lb-nav a.lb-prev::before, .lb-nav a.lb-next::before {
+    opacity: 0.4;
+    transition: opacity 0.2s;
+}
+.lb-nav a.lb-prev:hover::before, .lb-nav a.lb-next:hover::before {
+    opacity: 1;
+}
