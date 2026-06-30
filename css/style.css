@@ -213,4 +213,31 @@ footer{
     line-height:1.7;
 }
 
+/* ======== Mobil Nézet (768px alatti kijelzők) ======== */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Egymás alá rakja a logót és a menüt */
+        padding: 15px 10px;     /* Kevesebb belső helyet hagy a széleken */
+    }
+
+    .logo img {
+        width: 80px;            /* Mobilon elég a kisebb, 80px-es logó */
+        height: 80px;
+        margin-bottom: 10px;    /* Távolság a logó és a menüpontok között */
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: center; /* Középre igazítja a menüpontokat */
+        gap: 20px;              /* Kicsit közelebb hozza a gombokat egymáshoz */
+    }
+
+    .menu a {
+        font-size: 16px;        /* Mobilon az olvasható, de kompakt méret */
+    }
+
+    body {
+        padding-top: 170px;     /* Megnövelt hely az egymás alá került elemeknek */
+    }
+}
 
