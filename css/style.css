@@ -178,32 +178,54 @@ footer{
 
 .insta {
     margin-top: 24px;
-    text-align: center;
-    color: var(--indigo);
-    font-weight: 600;
-    box-shadow: rgba(36, 24, 22, 0.06) 0px 4px 12px;
     padding: 16px 18px;
     background: linear-gradient(rgba(255, 248, 238, 0.96), rgba(244, 232, 214, 0.96));
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(202, 162, 75, 0.35);
-    border-image: initial;
+    border: 1px solid rgba(202, 162, 75, 0.35);
     border-radius: 16px;
+    box-shadow: rgba(36, 24, 22, 0.06) 0px 4px 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    text-align: center;
+    color: #24324d; /* mert most a var(--indigo) nincs definiálva nálad */
+    font-weight: 600;
+    line-height: 1.4;
+    flex-wrap: wrap;
 }
 
 .insta a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-left: 6px;
+
     width: 42px;
     height: 42px;
-    font-size: 22px;
-    color: rgb(255, 248, 240);
-    box-shadow: rgba(159, 29, 34, 0.2) 0px 8px 18px;
+    margin-left: 0;
+
     border-radius: 50%;
     text-decoration: none;
+
+    font-size: 20px;
+    line-height: 1;
+    color: rgb(255, 248, 240);
+
     background: linear-gradient(180deg, #9f1d22, #b2262c);
+    box-shadow: rgba(159, 29, 34, 0.2) 0px 8px 18px;
+
+    transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+}
+
+.insta a:hover {
+    transform: translateY(-3px) scale(1.06);
+    box-shadow: rgba(159, 29, 34, 0.3) 0px 12px 24px;
+    background: linear-gradient(180deg, #b2262c, #c93239);
+}
+
+.insta a:active {
+    transform: translateY(-1px) scale(0.98);
 }
 
 /* ÚJ SZABÁLY: Megnövelt betűméret és függőleges igazítás a szöveges menüpontoknak */
