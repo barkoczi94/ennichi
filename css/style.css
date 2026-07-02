@@ -176,6 +176,21 @@ footer{
     margin:0 auto;
 }
 
+.insta {
+    margin-top: 24px;
+    text-align: center;
+    color: var(--indigo);
+    font-weight: 600;
+    box-shadow: rgba(36, 24, 22, 0.06) 0px 4px 12px;
+    padding: 16px 18px;
+    background: linear-gradient(rgba(255, 248, 238, 0.96), rgba(244, 232, 214, 0.96));
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(202, 162, 75, 0.35);
+    border-image: initial;
+    border-radius: 16px;
+}
+
 .insta a {
     display: inline-flex;
     align-items: center;
