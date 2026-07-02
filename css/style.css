@@ -228,6 +228,11 @@ footer{
     transform: translateY(-1px) scale(0.98);
 }
 
+.insta a span {
+    display: block;
+    transform: translateY(-1px);
+}
+
 /* ÚJ SZABÁLY: Megnövelt betűméret és függőleges igazítás a szöveges menüpontoknak */
 .menu a {
     font-size: 24px; 
