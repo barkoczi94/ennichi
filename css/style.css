@@ -178,59 +178,96 @@ footer{
 
 .insta {
     margin-top: 24px;
-    padding: 16px 18px;
-    background: linear-gradient(rgba(255, 248, 238, 0.96), rgba(244, 232, 214, 0.96));
-    border: 1px solid rgba(202, 162, 75, 0.35);
-    border-radius: 16px;
-    box-shadow: rgba(36, 24, 22, 0.06) 0px 4px 12px;
-
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 10px;
-
-    text-align: center;
-    color: #24324d; /* mert most a var(--indigo) nincs definiálva nálad */
-    font-weight: 600;
-    line-height: 1.4;
-    flex-wrap: wrap;
 }
 
 .insta a {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
+    gap: 14px;
 
-    width: 42px;
-    height: 42px;
-    margin-left: 0;
-
-    border-radius: 50%;
+    padding: 12px 18px;
+    border-radius: 999px;
     text-decoration: none;
 
-    font-size: 20px;
-    line-height: 1;
-    color: rgb(255, 248, 240);
+    background:
+        linear-gradient(135deg, #fdf6ee 0%, #f5e8d7 100%);
+    border: 1px solid rgba(202, 162, 75, 0.35);
+    box-shadow: 0 6px 16px rgba(36, 24, 22, 0.08);
 
-    background: linear-gradient(180deg, #9f1d22, #b2262c);
-    box-shadow: rgba(159, 29, 34, 0.2) 0px 8px 18px;
-
-    transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+    color: #24324d;
+    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 
 .insta a:hover {
-    transform: translateY(-3px) scale(1.06);
-    box-shadow: rgba(159, 29, 34, 0.3) 0px 12px 24px;
-    background: linear-gradient(180deg, #b2262c, #c93239);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(36, 24, 22, 0.12);
+    border-color: rgba(159, 29, 34, 0.22);
 }
 
 .insta a:active {
-    transform: translateY(-1px) scale(0.98);
+    transform: translateY(0);
 }
 
-.insta a span {
-    display: block;
-    transform: translateY(-1px);
+.insta-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+
+    font-size: 22px;
+    line-height: 1;
+    color: #fff8f0;
+
+    background: linear-gradient(180deg, #b2262c 0%, #8f1d22 100%);
+    box-shadow: 0 8px 18px rgba(159, 29, 34, 0.22);
+    flex-shrink: 0;
+}
+
+.insta-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.15;
+}
+
+.insta-text strong {
+    font-size: 17px;
+    font-weight: 700;
+    color: #24324d;
+}
+
+.insta-text small {
+    margin-top: 4px;
+    font-size: 13px;
+    color: #7a5f52;
+    letter-spacing: 0.03em;
+}
+
+@media (max-width: 520px) {
+    .insta a {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 14px;
+    }
+
+    .insta-text strong {
+        font-size: 15px;
+    }
+
+    .insta-text small {
+        font-size: 12px;
+    }
+
+    .insta-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
+    }
 }
 
 /* ÚJ SZABÁLY: Megnövelt betűméret és függőleges igazítás a szöveges menüpontoknak */
