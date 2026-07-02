@@ -61,6 +61,11 @@ nav a:hover{
     box-shadow: 0 4px 12px rgba(0,0,0,.06);
 }
 
+.card h2 {
+    color: #b3002d;
+    margin-top: 0;
+}
+
 .wb-stl-custom1 {
     font-family: 'Zen Old Mincho', serif;
     font-size: 40px;
@@ -156,9 +161,6 @@ footer{
     border-radius:15px;
     text-align:center;
     border:2px solid #ffd5dd;
-}
-.h2{
-    color:#b3002d;
 }
 
 .info-box h2{
