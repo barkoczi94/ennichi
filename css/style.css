@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding-top: 150px; /* MÓDOSÍTVA: Nagyobb hely a menünek, hogy ne takarjon ki semmit */
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Serif JP', serif;
     background: #ffffff;
     color: #222;
 }
@@ -56,13 +56,13 @@ nav a:hover{
     background: white;
     margin: 15px 0;
     padding: 22px;
-    border-radius: 14px;
-    border-left: 6px solid #e6002d;
+    border-radius: 8px;
+    border-left:4px solid #b3002d;
     box-shadow: 0 4px 12px rgba(0,0,0,.06);
 }
 
 .wb-stl-custom1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Zen Old Mincho', serif;
     font-size: 40px;
     font-style: italic;
     color: #e6002d;
@@ -121,7 +121,7 @@ footer{
 }
 
 .product:hover{
-    transform:translateY(-6px);
+    transform:translateY(-2px);
     box-shadow:0 12px 25px rgba(0,0,0,.15);
 }
 
