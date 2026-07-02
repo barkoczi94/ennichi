@@ -176,6 +176,21 @@ footer{
     margin:0 auto;
 }
 
+.insta a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6px;
+    width: 42px;
+    height: 42px;
+    font-size: 22px;
+    color: rgb(255, 248, 240);
+    box-shadow: rgba(159, 29, 34, 0.2) 0px 8px 18px;
+    border-radius: 50%;
+    text-decoration: none;
+    background: linear-gradient(180deg, var(--red), var(--red-deep));
+}
+
 /* ÚJ SZABÁLY: Megnövelt betűméret és függőleges igazítás a szöveges menüpontoknak */
 .menu a {
     font-size: 24px; 
