@@ -203,7 +203,7 @@ footer{
     box-shadow: rgba(159, 29, 34, 0.2) 0px 8px 18px;
     border-radius: 50%;
     text-decoration: none;
-    background: linear-gradient(180deg, var(--red), var(--red-deep));
+    background: linear-gradient(180deg, #9f1d22, #b2262c);
 }
 
 /* ÚJ SZABÁLY: Megnövelt betűméret és függőleges igazítás a szöveges menüpontoknak */
