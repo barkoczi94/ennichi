@@ -22,18 +22,29 @@ href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
     </a>
 
     <div class="menu">
-        <a href="esemenyek.html">Események</a>
-        <a href="termekek.html">Termékek</a>
-        <a href="jatekok.html">Játékok</a>
+        <a href="esemenyek.html" id="nav-events">Események</a>
+        <a href="termekek.html" id="nav-products">Termékek</a>
+        <a href="jatekok.html" id="nav-games">Játékok</a>
     </div>
+   <div class="lang-switcher">
+  <button type="button" class="lang-btn active" onclick="setLanguage('hu')" aria-label="Magyar nyelv">
+    🇭🇺
+  </button>
+  <button type="button" class="lang-btn" onclick="setLanguage('en')" aria-label="English language">
+    🇬🇧
+  </button>
+  <button type="button" class="lang-btn" onclick="setLanguage('jp')" aria-label="日本語">
+    🇯🇵
+  </button>
+</div>
 </nav>
 
 <div class="container">
 
   <div id="about" class="card">
-    <h1 class="wb-stl-custom1">Üdvözlünk az Ennichi-n!</h1>
+    <h1 class="wb-stl-custom1" id="welcome-title">Üdvözlünk az Ennichi-n!</h1>
 
-    <p>
+    <p id="about-text">
       Az Ennichi nem csupán egy hely – ez egy igazi japán nyári fesztivál élménye Magyarországon!<br><br>
 
       Szeretnénk újraalkotni a japán hagyományos fesztiválok által hordozott, vidám, barátságos és kissé nosztalgikus hangulatot.<br><br>
@@ -56,15 +67,15 @@ href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
     </span>
 
     <span class="insta-text">
-      <strong>Kövess minket</strong>
-      <small>@ennichi_hu</small>
+      <strong id="insta-follow">Kövess minket</strong>
+      <small id="insta-handle">@ennichi_hu</small>
     </span>
   </a>
 </div>
   </div>
 
  <div id="gallery" class="card">
-    <h2>📸 Galéria</h2>
+    <h2 id="gallery-title">📸 Galéria</h2>
 
     <div class="gallery-preview">
         <button type="button" class="gallery-thumb-open" onclick="openGallery(0)">
@@ -81,7 +92,7 @@ href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
     </div>
 
     <div class="gallery-actions">
-        <button type="button" class="gallery-open-all button" onclick="openGallery(0)">
+        <button type="button" class="gallery-open-all button" onclick="openGallery(0)" id="gallery-open-btn">
             Galéria megnyitása
         </button>
     </div>
@@ -115,6 +126,96 @@ href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
   © Ennichi - Japán fesztivál élmény
 </footer>
 
+<script>
+const translations = {
+  hu: {
+    navEvents: "Események",
+    navProducts: "Termékek",
+    navGames: "Játékok",
+    welcomeTitle: "Üdvözlünk az Ennichi-n!",
+    aboutText: `
+      Az Ennichi nem csupán egy hely – ez egy igazi japán nyári fesztivál élménye Magyarországon!<br><br>
+      Szeretnénk újraalkotni a japán hagyományos fesztiválok által hordozott, vidám, barátságos és kissé nosztalgikus hangulatot.<br><br>
+      Gyere, játssz velünk Super Ball halászatot, próbáld ki a Radír Lottót, és vegyél részt édesség-nyereményhúzásainkon!<br><br>
+      Ha pedig kedveled az animéket, nálunk megtalálod a legmenőbb anime hangulatú játékokat is.<br><br>
+      Nálunk mindenki otthon érezheti magát — legyen szó kisgyermekről vagy felnőttről, lelkes rajongóról vagy kíváncsiskodóról.<br><br>
+      Csatlakozz hozzánk, és éld át velünk a japán nyár varázsát! 🌸
+    `,
+    instaFollow: "Kövess minket",
+    galleryTitle: "📸 Galéria",
+    galleryOpen: "Galéria megnyitása",
+    closeGallery: "Galéria bezárása",
+    prevImage: "Előző kép",
+    nextImage: "Következő kép"
+  },
+  en: {
+    navEvents: "Events",
+    navProducts: "Products",
+    navGames: "Games",
+    welcomeTitle: "Welcome to Ennichi!",
+    aboutText: `
+      Ennichi is not just a place – it is a true Japanese summer festival experience in Hungary!<br><br>
+      We would like to recreate the cheerful, friendly and slightly nostalgic atmosphere of traditional Japanese festivals.<br><br>
+      Come and try Super Ball fishing, Eraser Lottery, and join our sweet prize draws!<br><br>
+      If you love anime, you will also find exciting anime-inspired games with us.<br><br>
+      Everyone can feel at home here — children and adults alike, dedicated fans and curious visitors too.<br><br>
+      Join us and experience the magic of Japanese summer with us! 🌸
+    `,
+    instaFollow: "Follow us",
+    galleryTitle: "📸 Gallery",
+    galleryOpen: "Open gallery",
+    closeGallery: "Close gallery",
+    prevImage: "Previous image",
+    nextImage: "Next image"
+  },
+  jp: {
+    navEvents: "イベント",
+    navProducts: "商品",
+    navGames: "ゲーム",
+    welcomeTitle: "エンニチへようこそ！",
+    aboutText: `
+      Ennichi はただの場所ではなく、ハンガリーで楽しめる本格的な日本の夏祭り体験です。<br><br>
+      私たちは、日本の伝統的なお祭りが持つ楽しくて親しみやすく、少し懐かしい雰囲気を再現したいと考えています。<br><br>
+      スーパーボールすくいや消しゴムくじ、お菓子が当たる抽選もぜひお楽しみください。<br><br>
+      アニメが好きな方には、アニメ風の楽しいゲームもご用意しています。<br><br>
+      小さなお子さまから大人まで、ファンの方も初めての方も、誰でも楽しめる場所です。<br><br>
+      私たちと一緒に日本の夏の魅力を体験してください！ 🌸
+    `,
+    instaFollow: "フォローしてください",
+    galleryTitle: "📸 ギャラリー",
+    galleryOpen: "ギャラリーを開く",
+    closeGallery: "ギャラリーを閉じる",
+    prevImage: "前の画像",
+    nextImage: "次の画像"
+  }
+};
+
+function setLanguage(lang) {
+  document.documentElement.lang = lang;
+
+  document.getElementById("nav-events").textContent = translations[lang].navEvents;
+  document.getElementById("nav-products").textContent = translations[lang].navProducts;
+  document.getElementById("nav-games").textContent = translations[lang].navGames;
+  document.getElementById("welcome-title").textContent = translations[lang].welcomeTitle;
+  document.getElementById("about-text").innerHTML = translations[lang].aboutText;
+  document.getElementById("insta-follow").textContent = translations[lang].instaFollow;
+  document.getElementById("gallery-title").textContent = translations[lang].galleryTitle;
+  document.getElementById("gallery-open-btn").textContent = translations[lang].galleryOpen;
+
+  document.querySelector(".custom-gallery-close").setAttribute("aria-label", translations[lang].closeGallery);
+  document.querySelector(".custom-gallery-nav.prev").setAttribute("aria-label", translations[lang].prevImage);
+  document.querySelector(".custom-gallery-nav.next").setAttribute("aria-label", translations[lang].nextImage);
+
+  document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("active"));
+  document.querySelector(`.lang-btn[onclick="setLanguage('${lang}')"]`).classList.add("active");
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  setLanguage("hu");
+});
+</script>
+
+  
 <script>
 const galleryImages = [
     {
