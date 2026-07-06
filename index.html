@@ -215,9 +215,9 @@ function setLanguage(lang) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  setLanguage("hu");
+  let savedLanguage = "hu";
 
-    try {
+  try {
     savedLanguage = localStorage.getItem("selectedLanguage") || "hu";
   } catch (e) {}
 
