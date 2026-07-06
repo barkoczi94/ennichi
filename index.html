@@ -78,13 +78,21 @@
 
       <button class="gallery-arrow gallery-next" onclick="changeImage(1)" aria-label="Következő kép">❯</button>
 
-      <div class="gallery-thumbs" id="galleryThumbs">
-        <img src="Kepek/tanabata1.jpg" alt="Tanabata dekoráció" onclick="setImage(0)">
-        <img src="Kepek/tanabata2.jpg" alt="Tanabata fesztiválkép" onclick="setImage(1)">
-        <img src="Kepek/momiji1.jpeg" alt="Momiji stand" onclick="setImage(2)">
-        <img src="Kepek/japannap1.jpeg" alt="Japán nap rendezvénykép" onclick="setImage(3)">
-        <img src="Kepek/japannap2.jpeg" alt="Japán nap közeli részlet" onclick="setImage(4)">
-      </div>
+      <div class="gallery-preview">
+    <a href="#" onclick="openGallery(0); return false;">
+        <img src="Kepek/tanabata1.jpg" alt="Ennichi 1">
+    </a>
+    <a href="#" onclick="openGallery(1); return false;">
+        <img src="Kepek/momiji1.jpeg" alt="Ennichi 2">
+    </a>
+    <a href="#" onclick="openGallery(2); return false;">
+        <img src="Kepek/japannap1.jpeg" alt="Ennichi 3">
+    </a>
+</div>
+
+<div class="gallery-actions">
+    <a href="#" class="gallery-open-all" onclick="openGallery(0); return false;">Galéria megnyitása</a>
+</div>
     </div>
   </main>
 
