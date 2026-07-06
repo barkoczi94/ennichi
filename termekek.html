@@ -164,6 +164,10 @@ const translations = {
 };
 
 function setLanguage(lang) {
+  try {
+    localStorage.setItem("selectedLanguage", lang);
+  } catch (e) {}
+
   document.documentElement.lang = lang;
   document.title = translations[lang].pageTitle;
 
@@ -187,6 +191,16 @@ function setLanguage(lang) {
   document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("active"));
   document.querySelector(`[onclick="setLanguage('${lang}')"]`).classList.add("active");
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  let savedLanguage = "hu";
+
+  try {
+    savedLanguage = localStorage.getItem("selectedLanguage") || "hu";
+  } catch (e) {}
+
+  setLanguage(savedLanguage);
+});
 </script>
 
 </body>
