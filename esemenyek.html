@@ -39,7 +39,7 @@
 </section>
 
 <section class="card">
-  <h2 id="event1-title">🎋 <s>3. Zuglói Tanabata Fesztivál</s></h2>
+  <h2 id="event1-title">🎋 3. Zuglói Tanabata Fesztivál</h2>
   <p><strong id="event1-date">🗓 2026. július 05. (vasárnap)</strong></p>
 
   <p id="event1-text1">
@@ -61,7 +61,7 @@
 </section>
 
 <section class="card">
-  <h2 id="event2-title">🍁 <del>Japán nap – Momiji Fesztivál</del></h2>
+  <h2 id="event2-title">🍁 Japán nap – Momiji Fesztivál</h2>
   <p><strong id="event2-date">🗓 2025. szeptember 27. (szombat)</strong></p>
 
   <p id="event2-text1">
@@ -208,5 +208,27 @@
   }
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const events = [
+    { id: "event1-date", date: "2026-07-05" },
+    { id: "event2-date", date: "2025-09-27" },
+    { id: "event3-date", date: "2025-09-20" }
+  ];
+
+  events.forEach(event => {
+    const el = document.getElementById(event.id);
+    const eventDate = new Date(event.date);
+
+    if (el && eventDate < today) {
+      el.style.textDecoration = "line-through";
+    }
+  });
+});
+</script>
+    
 </body>
 </html>
