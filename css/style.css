@@ -527,6 +527,33 @@ body.gallery-open {
     }
 }
 
+.gallery-open-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 220px;
+    padding: 12px 22px;
+    border: 1px solid rgba(202, 162, 75, 0.35);
+    border-radius: 999px;
+
+    background: linear-gradient(135deg, #fdf6ee 0%, #f5e8d7 100%);
+    color: #24324d;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+
+    box-shadow: 0 6px 16px rgba(36, 24, 22, 0.08);
+    transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+}
+
+.gallery-open-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(36, 24, 22, 0.12);
+}
+
 /* ======== Mobil Nézet (768px alatti kijelzők) ======== */
 @media (max-width: 768px) {
     nav {
