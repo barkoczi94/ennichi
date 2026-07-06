@@ -299,7 +299,7 @@ footer{
     line-height:1.7;
 }
 
-/* ======== Galéria előnézet az oldalon: csak 3 kép ======== */
+/* ======== Galéria előnézet az oldalon: 3–5 kép ======== */
 .gallery-preview {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -307,9 +307,14 @@ footer{
     margin-top: 20px;
 }
 
-.gallery-preview a {
+.gallery-preview a,
+.gallery-preview button {
     display: block;
     text-decoration: none;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
 }
 
 .gallery-preview img {
@@ -317,11 +322,11 @@ footer{
     height: 190px;
     object-fit: cover;
     border-radius: 12px;
-    cursor: pointer;
     border: 1px solid rgba(36, 24, 22, 0.08);
     box-shadow: 0 5px 14px rgba(36, 24, 22, 0.08);
     transition: transform 0.22s ease, box-shadow 0.22s ease;
     background: #fffaf4;
+    display: block;
 }
 
 .gallery-preview img:hover {
@@ -345,6 +350,8 @@ footer{
     font-weight: 700;
     transition: background 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
     box-shadow: 0 8px 18px rgba(179, 0, 45, 0.18);
+    border: none;
+    cursor: pointer;
 }
 
 .gallery-open-all:hover {
@@ -366,7 +373,7 @@ footer{
     z-index: 9999;
     background: rgba(20, 16, 14, 0.92);
     backdrop-filter: blur(8px);
-    padding: 30px 20px 20px;
+    padding: 28px 20px 18px;
 }
 
 .gallery-modal.active {
@@ -379,16 +386,17 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1000px;
+    max-width: 1100px;
     width: 100%;
     margin: 0 auto;
     flex: 1;
     position: relative;
+    padding: 0 72px;
 }
 
 .gallery-modal-content img {
     max-width: 100%;
-    max-height: 72vh;
+    max-height: 70vh;
     object-fit: contain;
     border-radius: 16px;
     box-shadow: 0 18px 40px rgba(0,0,0,0.3);
@@ -424,6 +432,9 @@ footer{
     cursor: pointer;
     z-index: 10001;
     transition: background 0.2s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .gallery-arrow:hover {
@@ -431,11 +442,11 @@ footer{
 }
 
 .gallery-prev {
-    left: 20px;
+    left: 8px;
 }
 
 .gallery-next {
-    right: 20px;
+    right: 8px;
 }
 
 /* ======== Alsó bélyegképek a modalban ======== */
@@ -450,6 +461,7 @@ footer{
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    scrollbar-width: thin;
 }
 
 .gallery-thumbs img {
@@ -463,6 +475,7 @@ footer{
     transition: opacity 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
     flex: 0 0 auto;
     background: #fffaf4;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
 }
 
 .gallery-thumbs img:hover {
@@ -476,6 +489,12 @@ footer{
 }
 
 /* ======== Mobil ======== */
+@media (max-width: 900px) {
+    .gallery-modal-content {
+        padding: 0 54px;
+    }
+}
+
 @media (max-width: 768px) {
     .gallery-preview {
         grid-template-columns: repeat(2, 1fr);
@@ -483,6 +502,18 @@ footer{
 
     .gallery-preview img {
         height: 150px;
+    }
+
+    .gallery-modal {
+        padding: 22px 12px 14px;
+    }
+
+    .gallery-modal-content {
+        padding: 0 46px;
+    }
+
+    .gallery-modal-content img {
+        max-height: 62vh;
     }
 
     .gallery-thumbs img {
@@ -495,6 +526,14 @@ footer{
         height: 44px;
         font-size: 22px;
     }
+
+    .gallery-prev {
+        left: 0;
+    }
+
+    .gallery-next {
+        right: 0;
+    }
 }
 
 @media (max-width: 520px) {
@@ -505,33 +544,23 @@ footer{
     .gallery-preview img {
         height: 180px;
     }
-}
 
-/* ======== Mobil Nézet (768px alatti kijelzők) ======== */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column; /* Egymás alá rakja a logót és a menüt */
-        padding: 15px 10px;     /* Kevesebb belső helyet hagy a széleken */
+    .gallery-modal-content {
+        padding: 0 40px;
     }
 
-    .logo img {
-        width: 80px;            /* Mobilon elég a kisebb, 80px-es logó */
-        height: 80px;
-        margin-bottom: 10px;    /* Távolság a logó és a menüpontok között */
+    .gallery-modal-content img {
+        max-height: 56vh;
     }
 
-    .menu {
-        width: 100%;
-        justify-content: center; /* Középre igazítja a menüpontokat */
-        gap: 20px;              /* Kicsit közelebb hozza a gombokat egymáshoz */
+    .gallery-thumbs {
+        justify-content: flex-start;
+        padding-bottom: 2px;
     }
 
-    .menu a {
-        font-size: 16px;        /* Mobilon az olvasható, de kompakt méret */
-    }
-
-    body {
-        padding-top: 170px;     /* Megnövelt hely az egymás alá került elemeknek */
+    .gallery-thumbs img {
+        width: 58px;
+        height: 58px;
     }
 }
 
