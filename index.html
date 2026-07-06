@@ -56,37 +56,56 @@
     </section>
 
     <section id="gallery" class="card">
-      <h2>Galéria</h2>
+    <h2>Galéria</h2>
 
-      <div class="gallery">
+    <div class="gallery-preview">
+        <a href="#" onclick="openGallery(0); return false;">
+            <img src="Kepek/tanabata1.jpg" alt="Tanabata dekoráció">
+        </a>
+
+        <a href="#" onclick="openGallery(1); return false;">
+            <img src="Kepek/momiji1.jpeg" alt="Momiji stand">
+        </a>
+
+        <a href="#" onclick="openGallery(2); return false;">
+            <img src="Kepek/japannap1.jpeg" alt="Japán nap rendezvénykép">
+        </a>
+    </div>
+
+    <div class="gallery-actions">
+        <a href="#" class="gallery-open-all" onclick="openGallery(0); return false;">Galéria megnyitása</a>
+    </div>
+</section>
+
+<div id="galleryModal" class="gallery-modal">
+    <button class="gallery-close" onclick="closeGallery()" aria-label="Galéria bezárása">×</button>
+
+    <button class="gallery-arrow gallery-prev" onclick="changeImage(-1)" aria-label="Előző kép">❮</button>
+
+    <div class="gallery-modal-content">
+        <img id="galleryMainImage" src="" alt="Nagyított galéria kép">
+    </div>
+
+    <button class="gallery-arrow gallery-next" onclick="changeImage(1)" aria-label="Következő kép">❯</button>
+
+    <div id="galleryThumbs" class="gallery-preview gallery-preview-modal">
         <img src="Kepek/tanabata1.jpg" alt="Tanabata dekoráció" onclick="openGallery(0)">
         <img src="Kepek/tanabata2.jpg" alt="Tanabata fesztiválkép" onclick="openGallery(1)">
         <img src="Kepek/momiji1.jpeg" alt="Momiji stand" onclick="openGallery(2)">
         <img src="Kepek/japannap1.jpeg" alt="Japán nap rendezvénykép" onclick="openGallery(3)">
         <img src="Kepek/japannap2.jpeg" alt="Japán nap közeli részlet" onclick="openGallery(4)">
-      </div>
-    </section>
-
-    <div id="galleryModal" class="gallery-modal">
-      <button class="gallery-close" onclick="closeGallery()" aria-label="Galéria bezárása">×</button>
-
-      <button class="gallery-arrow gallery-prev" onclick="changeImage(-1)" aria-label="Előző kép">❮</button>
-
-      <div class="gallery-modal-content">
-        <img id="galleryMainImage" src="" alt="Nagyított galéria kép">
-      </div>
-
-      <button class="gallery-arrow gallery-next" onclick="changeImage(1)" aria-label="Következő kép">❯</button>
+    </div>
+</div>
 
       <div class="gallery-preview">
     <a href="#" onclick="openGallery(0); return false;">
-        <img src="Kepek/tanabata1.jpg" alt="Ennichi 1">
+        <img src="Kepek/tanabata1.jpg" alt="Tanabata dekoráció">
     </a>
     <a href="#" onclick="openGallery(1); return false;">
-        <img src="Kepek/momiji1.jpeg" alt="Ennichi 2">
+        <img src="Kepek/momiji1.jpeg" alt="Momiji stand">
     </a>
     <a href="#" onclick="openGallery(2); return false;">
-        <img src="Kepek/japannap1.jpeg" alt="Ennichi 3">
+        <img src="Kepek/japannap1.jpeg" alt="Japán nap rendezvénykép">
     </a>
 </div>
 
@@ -101,70 +120,70 @@
   </footer>
 
   <script>
-    const galleryImages = [
-      "Kepek/tanabata1.jpg",
-      "Kepek/tanabata2.jpg",
-      "Kepek/momiji1.jpeg",
-      "Kepek/japannap1.jpeg",
-      "Kepek/japannap2.jpeg"
-    ];
+  const galleryImages = [
+    "Kepek/tanabata1.jpg",
+    "Kepek/tanabata2.jpg",
+    "Kepek/momiji1.jpeg",
+    "Kepek/japannap1.jpeg",
+    "Kepek/japannap2.jpeg"
+  ];
 
-    let currentImageIndex = 0;
+  let currentImageIndex = 0;
 
-    function openGallery(index) {
-      currentImageIndex = index;
-      document.getElementById("galleryModal").classList.add("active");
-      updateGallery();
+  function openGallery(index) {
+    currentImageIndex = index;
+    document.getElementById("galleryModal").classList.add("active");
+    updateGallery();
+  }
+
+  function closeGallery() {
+    document.getElementById("galleryModal").classList.remove("active");
+  }
+
+  function changeImage(direction) {
+    currentImageIndex += direction;
+
+    if (currentImageIndex < 0) {
+      currentImageIndex = galleryImages.length - 1;
     }
 
-    function closeGallery() {
-      document.getElementById("galleryModal").classList.remove("active");
+    if (currentImageIndex >= galleryImages.length) {
+      currentImageIndex = 0;
     }
 
-    function changeImage(direction) {
-      currentImageIndex += direction;
+    updateGallery();
+  }
 
-      if (currentImageIndex < 0) {
-        currentImageIndex = galleryImages.length - 1;
-      }
+  function setImage(index) {
+    currentImageIndex = index;
+    updateGallery();
+  }
 
-      if (currentImageIndex >= galleryImages.length) {
-        currentImageIndex = 0;
-      }
+  function updateGallery() {
+    const mainImage = document.getElementById("galleryMainImage");
+    const thumbs = document.querySelectorAll("#galleryThumbs img");
 
-      updateGallery();
-    }
+    mainImage.src = galleryImages[currentImageIndex];
 
-    function setImage(index) {
-      currentImageIndex = index;
-      updateGallery();
-    }
-
-    function updateGallery() {
-      const mainImage = document.getElementById("galleryMainImage");
-      const thumbs = document.querySelectorAll("#galleryThumbs img");
-
-      mainImage.src = galleryImages[currentImageIndex];
-
-      thumbs.forEach((thumb, index) => {
-        thumb.classList.toggle("active", index === currentImageIndex);
-      });
-    }
-
-    document.addEventListener("keydown", function(e) {
-      const modal = document.getElementById("galleryModal");
-      if (!modal.classList.contains("active")) return;
-
-      if (e.key === "Escape") closeGallery();
-      if (e.key === "ArrowLeft") changeImage(-1);
-      if (e.key === "ArrowRight") changeImage(1);
+    thumbs.forEach((thumb, index) => {
+      thumb.classList.toggle("active", index === currentImageIndex);
     });
+  }
 
-    document.getElementById("galleryModal").addEventListener("click", function(e) {
-      if (e.target === this) {
-        closeGallery();
-      }
-    });
-  </script>
+  document.addEventListener("keydown", function(e) {
+    const modal = document.getElementById("galleryModal");
+    if (!modal.classList.contains("active")) return;
+
+    if (e.key === "Escape") closeGallery();
+    if (e.key === "ArrowLeft") changeImage(-1);
+    if (e.key === "ArrowRight") changeImage(1);
+  });
+
+  document.getElementById("galleryModal").addEventListener("click", function(e) {
+    if (e.target === this) {
+      closeGallery();
+    }
+  });
+</script>
 </body>
 </html>
