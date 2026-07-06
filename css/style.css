@@ -299,28 +299,7 @@ footer{
     line-height:1.7;
 }
 
-/* ======== Galéria elrendezése ======== */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.gallery img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;         /* A kis képek egységes méretűek lesznek, nem torzulnak */
-    border-radius: 8px;
-    cursor: pointer;           /* Mutatja a kurzorral, hogy rákattintható */
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.gallery img:hover {
-    transform: scale(1.03);    /* Rámutatáskor picit megmozdul */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
+/* ======== Galéria előnézet az oldalon: csak 3 kép ======== */
 .gallery-preview {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -330,23 +309,27 @@ footer{
 
 .gallery-preview a {
     display: block;
+    text-decoration: none;
 }
 
 .gallery-preview img {
     width: 100%;
     height: 190px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 12px;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    border: 1px solid rgba(36, 24, 22, 0.08);
+    box-shadow: 0 5px 14px rgba(36, 24, 22, 0.08);
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+    background: #fffaf4;
 }
 
 .gallery-preview img:hover {
     transform: scale(1.03);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.14);
+    box-shadow: 0 10px 24px rgba(36, 24, 22, 0.16);
 }
 
+/* ======== Galéria megnyitó gomb ======== */
 .gallery-actions {
     margin-top: 18px;
     text-align: center;
@@ -355,65 +338,27 @@ footer{
 .gallery-open-all {
     display: inline-block;
     background: #b3002d;
-    color: white;
+    color: #fff;
     padding: 12px 20px;
     border-radius: 999px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
+    transition: background 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+    box-shadow: 0 8px 18px rgba(179, 0, 45, 0.18);
 }
 
 .gallery-open-all:hover {
     background: #c50025;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(179, 0, 45, 0.24);
 }
 
+/* ======== Rejtett teljes galéria adatok ======== */
 .gallery-hidden {
     display: none;
 }
 
-@media (max-width: 768px) {
-    .gallery-preview {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .gallery-preview img {
-        height: 150px;
-    }
-}
-
-@media (max-width: 520px) {
-    .gallery-preview {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery-preview img {
-        height: 180px;
-    }
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 14px;
-    margin-top: 20px;
-}
-
-.gallery img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 14px;
-    cursor: pointer;
-    border: 1px solid rgba(36, 24, 22, 0.08);
-    box-shadow: 0 5px 14px rgba(36, 24, 22, 0.08);
-    transition: transform 0.22s ease, box-shadow 0.22s ease;
-    background: #fffaf4;
-}
-
-.gallery img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 10px 24px rgba(36, 24, 22, 0.16);
-}
-
+/* ======== Modal nagy galéria ======== */
 .gallery-modal {
     display: none;
     position: fixed;
@@ -438,6 +383,7 @@ footer{
     width: 100%;
     margin: 0 auto;
     flex: 1;
+    position: relative;
 }
 
 .gallery-modal-content img {
@@ -446,8 +392,10 @@ footer{
     object-fit: contain;
     border-radius: 16px;
     box-shadow: 0 18px 40px rgba(0,0,0,0.3);
+    background: #fffaf4;
 }
 
+/* ======== Bezárás ======== */
 .gallery-close {
     position: absolute;
     top: 18px;
@@ -458,8 +406,10 @@ footer{
     border: none;
     cursor: pointer;
     z-index: 10001;
+    line-height: 1;
 }
 
+/* ======== Nyilak ======== */
 .gallery-arrow {
     position: absolute;
     top: 50%;
@@ -488,6 +438,7 @@ footer{
     right: 20px;
 }
 
+/* ======== Alsó bélyegképek a modalban ======== */
 .gallery-thumbs {
     display: flex;
     justify-content: center;
@@ -495,6 +446,10 @@ footer{
     margin-top: 18px;
     padding: 10px 0 0;
     overflow-x: auto;
+    max-width: 1000px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .gallery-thumbs img {
@@ -507,6 +462,7 @@ footer{
     border: 2px solid transparent;
     transition: opacity 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
     flex: 0 0 auto;
+    background: #fffaf4;
 }
 
 .gallery-thumbs img:hover {
@@ -519,13 +475,14 @@ footer{
     border-color: #caa24b;
 }
 
+/* ======== Mobil ======== */
 @media (max-width: 768px) {
-    .gallery {
+    .gallery-preview {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .gallery img {
-        height: 130px;
+    .gallery-preview img {
+        height: 150px;
     }
 
     .gallery-thumbs img {
@@ -537,6 +494,16 @@ footer{
         width: 44px;
         height: 44px;
         font-size: 22px;
+    }
+}
+
+@media (max-width: 520px) {
+    .gallery-preview {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-preview img {
+        height: 180px;
     }
 }
 
