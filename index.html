@@ -191,6 +191,10 @@ const translations = {
 };
 
 function setLanguage(lang) {
+  try {
+    localStorage.setItem("selectedLanguage", lang);
+  } catch (e) {}
+
   document.documentElement.lang = lang;
 
   document.getElementById("nav-events").textContent = translations[lang].navEvents;
@@ -212,6 +216,12 @@ function setLanguage(lang) {
 
 document.addEventListener("DOMContentLoaded", function () {
   setLanguage("hu");
+
+    try {
+    savedLanguage = localStorage.getItem("selectedLanguage") || "hu";
+  } catch (e) {}
+
+  setLanguage(savedLanguage);
 });
 </script>
 
