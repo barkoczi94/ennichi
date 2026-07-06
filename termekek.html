@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Termékeink | Ennichi</title>
+<title id="page-title">Termékeink | Ennichi</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
 
@@ -13,95 +13,181 @@
 </head>
 <body>
 
- <nav>
-    <a href="index.html" class="logo">
-        <img src="Kepek/ennichi.jpg" alt="Ennichi">
-    </a>
+<nav>
+  <a href="index.html" class="logo">
+    <img src="Kepek/ennichi.jpg" alt="Ennichi logó" id="logo-alt">
+  </a>
 
-    <div class="menu">
-        <a href="esemenyek.html">Események</a>
-        <a href="termekek.html">Termékek</a>
-        <a href="jatekok.html">Játékok</a>
-    </div>
+  <div class="menu">
+    <a href="esemenyek.html" id="nav-events">Események</a>
+    <a href="termekek.html" id="nav-products">Termékek</a>
+    <a href="jatekok.html" id="nav-games">Játékok</a>
+  </div>
+
+  <div class="lang-switcher">
+    <button type="button" class="lang-btn active" onclick="setLanguage('hu')" aria-label="Magyar nyelv">🇭🇺</button>
+    <button type="button" class="lang-btn" onclick="setLanguage('en')" aria-label="English language">🇬🇧</button>
+    <button type="button" class="lang-btn" onclick="setLanguage('jp')" aria-label="日本語">🇯🇵</button>
+  </div>
 </nav>
 
 <div class="container">
 
-<h1 class="wb-stl-custom1">
-🛍️ Termékeink
-</h1>
-<div class="card">
+  <h1 class="wb-stl-custom1" id="products-title">🛍️ Termékeink</h1>
 
-<div class="products">
+  <div class="card">
+    <div class="products">
 
-<div class="product">
-    <img src="Kepek/akame.jpg" alt="">
-    <h3>Akame ga Kill! című mangakötet</h3>
+      <div class="product">
+        <img src="Kepek/akame.jpg" alt="Akame ga Kill manga">
+        <h3 id="product-1">Akame ga Kill! című mangakötet</h3>
+      </div>
+
+      <div class="product">
+        <img src="Kepek/rin.jpg" alt="Rin figura">
+        <h3 id="product-2">Love Live! School Idol Project - Rin Hoshizora Nendoroid figura</h3>
+      </div>
+
+      <div class="product">
+        <img src="Kepek/kyoukai.jpg" alt="Kyoukaizutome manga">
+        <h3 id="product-3">Kyoukaizutome no Shinkan desu ga, Yuusha no Zansatsu Shitai Tensou saretekuru no Kanben shite Hoshii desu című mangakötet</h3>
+      </div>
+
+      <div class="product">
+        <img src="Kepek/puniru.jpg" alt="Puniru figura">
+        <h3 id="product-4">Puniru wa Kawaii Slime - Puniru figura</h3>
+      </div>
+
+      <div class="product">
+        <img src="Kepek/hello.jpg" alt="Hello Kitty hajdísz rendező">
+        <h3 id="product-5">Hello Kitty hajdísz rendező</h3>
+      </div>
+
+      <div class="product">
+        <img src="Kepek/melody.jpg" alt="My Melody mini figura">
+        <h3 id="product-6">Sanrio My Melody mini figura</h3>
+      </div>
+
+      <div class="product">
+        <img src="Kepek/memcho.jpg" alt="Mem-cho figura">
+        <h3 id="product-7">Oshi no Ko Mem-cho figura</h3>
+      </div>
+
+      <div class="product">
+        <img src="Kepek/ganyu.jpg" alt="Ganyu akril telefontartó">
+        <h3 id="product-8">Genshin Impact Ganyu akril telefontartó</h3>
+      </div>
+
+      <div class="product">
+        <img src="Kepek/aki.jpg" alt="Aki Rosenthal akrilfigura">
+        <h3 id="product-9">Aki Rosenthal Hololive vol. 4 Mini Art Board akrilfigura</h3>
+      </div>
+
+    </div>
+
+    <div class="info-box">
+      <h2 id="more-title">Még sokkal több vár rád!</h2>
+
+      <p id="more-text">
+        A képeken csak néhány termék látható.
+        Minden eseményre új anime figurákkal, mangákkal,
+        plüssökkel, kulcstartókkal és egyéb japán
+        különlegességekkel készülünk.
+      </p>
+    </div>
+  </div>
 </div>
 
-
-<div class="product">
-<img src="Kepek/rin.jpg" alt="Rin figura">
-<h3>Love Live! School Idol Project- Rin Hoshizora Nendoroid figura </h3>
-</div>
-
-<div class="product">
-<img src="Kepek/kyoukai.jpg" alt="">
-<h3>Kyoukaizutome no Shinkan desu ga, Yuusha no Zansatsu Shitai Tensou saretekuru no Kanben shite Hoshii desu című mangakötet</h3>
-</div>
-
-<div class="product">
-<img src="Kepek/puniru.jpg" alt="">
-<h3>Puniru wa Kawaii Slime - Puniru figura</h3>
-</div>
-
-<div class="product">
-<img src="Kepek/hello.jpg" alt="">
-<h3>Hello Kitty hajdísz rendező</h3>
-</div>
-
-<div class="product">
-<img src="Kepek/melody.jpg" alt="">
-<h3>Sanrio My Melody mini figura</h3>
-</div>
-
-<div class="product">
-<img src="Kepek/memcho.jpg" alt="">
-<h3>Oshi no Ko Mem-cho figura </h3>
-</div>
-
-<div class="product">
-<img src="Kepek/ganyu.jpg" alt="">
-<h3>Genshin Impact Ganyu akril telefontartó</h3>
-</div>
-
-<div class="product">
-<img src="Kepek/aki.jpg" alt="">
-<h3>Aki Rosenthal Hololive vol. 4 Mini Art Board akrilfigura</h3>
-</div>
-
-</div>
-
-<div class="info-box">
-
-<h2>Még sokkal több vár rád!</h2>
-
-<p>
-A képeken csak néhány termék látható.
-Minden eseményre új anime figurákkal, mangákkal,
-plüssökkel, kulcstartókkal és egyéb japán
-különlegességekkel készülünk.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<footer>
+<footer id="footer-text">
   © Ennichi - Japán fesztivál élmény
 </footer>
+
+<script>
+const translations = {
+  hu: {
+    pageTitle: "Termékeink | Ennichi",
+    navEvents: "Események",
+    navProducts: "Termékek",
+    navGames: "Játékok",
+    productsTitle: "🛍️ Termékeink",
+    product1: "Akame ga Kill! című mangakötet",
+    product2: "Love Live! School Idol Project - Rin Hoshizora Nendoroid figura",
+    product3: "Kyoukaizutome no Shinkan desu ga, Yuusha no Zansatsu Shitai Tensou saretekuru no Kanben shite Hoshii desu című mangakötet",
+    product4: "Puniru wa Kawaii Slime - Puniru figura",
+    product5: "Hello Kitty hajdísz rendező",
+    product6: "Sanrio My Melody mini figura",
+    product7: "Oshi no Ko Mem-cho figura",
+    product8: "Genshin Impact Ganyu akril telefontartó",
+    product9: "Aki Rosenthal Hololive vol. 4 Mini Art Board akrilfigura",
+    moreTitle: "Még sokkal több vár rád!",
+    moreText: "A képeken csak néhány termék látható. Minden eseményre új anime figurákkal, mangákkal, plüssökkel, kulcstartókkal és egyéb japán különlegességekkel készülünk.",
+    footerText: "© Ennichi - Japán fesztivál élmény"
+  },
+  en: {
+    pageTitle: "Our Products | Ennichi",
+    navEvents: "Events",
+    navProducts: "Products",
+    navGames: "Games",
+    productsTitle: "🛍️ Our Products",
+    product1: "Akame ga Kill! manga volume",
+    product2: "Love Live! School Idol Project - Rin Hoshizora Nendoroid figure",
+    product3: "Kyoukaizutome no Shinkan desu ga, Yuusha no Zansatsu Shitai Tensou saretekuru no Kanben shite Hoshii desu manga volume",
+    product4: "Puniru wa Kawaii Slime - Puniru figure",
+    product5: "Hello Kitty hair accessory organizer",
+    product6: "Sanrio My Melody mini figure",
+    product7: "Oshi no Ko Mem-cho figure",
+    product8: "Genshin Impact Ganyu acrylic phone stand",
+    product9: "Aki Rosenthal Hololive Vol. 4 Mini Art Board acrylic figure",
+    moreTitle: "And there’s much more waiting for you!",
+    moreText: "The photos show only a few of our products. At every event, we bring new anime figures, manga, plushies, keychains, and other Japanese specialties.",
+    footerText: "© Ennichi - Japanese festival experience"
+  },
+  jp: {
+    pageTitle: "商品一覧 | Ennichi",
+    navEvents: "イベント",
+    navProducts: "商品",
+    navGames: "ゲーム",
+    productsTitle: "🛍️ 商品一覧",
+    product1: "『Akame ga Kill!』マンガ単行本",
+    product2: "Love Live! School Idol Project 星空凛 ねんどろいどフィギュア",
+    product3: "『Kyoukaizutome no Shinkan desu ga, Yuusha no Zansatsu Shitai Tensou saretekuru no Kanben shite Hoshii desu』マンガ単行本",
+    product4: "Puniru wa Kawaii Slime - プニル フィギュア",
+    product5: "ハローキティ ヘアアクセサリーオーガナイザー",
+    product6: "サンリオ マイメロディ ミニフィギュア",
+    product7: "【推しの子】MEMちょ フィギュア",
+    product8: "原神 甘雨 アクリルスマホスタンド",
+    product9: "Aki Rosenthal Hololive Vol.4 ミニアートボード アクリルフィギュア",
+    moreTitle: "ほかにもたくさんご用意しています！",
+    moreText: "写真に写っているのは商品のほんの一部です。各イベントでは、新しいアニメフィギュア、マンガ、ぬいぐるみ、キーホルダー、そのほか日本らしいアイテムを多数ご用意しています。",
+    footerText: "© Ennichi - 日本のお祭り体験"
+  }
+};
+
+function setLanguage(lang) {
+  document.documentElement.lang = lang;
+  document.title = translations[lang].pageTitle;
+
+  document.getElementById("nav-events").textContent = translations[lang].navEvents;
+  document.getElementById("nav-products").textContent = translations[lang].navProducts;
+  document.getElementById("nav-games").textContent = translations[lang].navGames;
+  document.getElementById("products-title").textContent = translations[lang].productsTitle;
+  document.getElementById("product-1").textContent = translations[lang].product1;
+  document.getElementById("product-2").textContent = translations[lang].product2;
+  document.getElementById("product-3").textContent = translations[lang].product3;
+  document.getElementById("product-4").textContent = translations[lang].product4;
+  document.getElementById("product-5").textContent = translations[lang].product5;
+  document.getElementById("product-6").textContent = translations[lang].product6;
+  document.getElementById("product-7").textContent = translations[lang].product7;
+  document.getElementById("product-8").textContent = translations[lang].product8;
+  document.getElementById("product-9").textContent = translations[lang].product9;
+  document.getElementById("more-title").textContent = translations[lang].moreTitle;
+  document.getElementById("more-text").textContent = translations[lang].moreText;
+  document.getElementById("footer-text").textContent = translations[lang].footerText;
+
+  document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("active"));
+  document.querySelector(`[onclick="setLanguage('${lang}')"]`).classList.add("active");
+}
+</script>
 
 </body>
 </html>
