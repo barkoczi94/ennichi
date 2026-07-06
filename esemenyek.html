@@ -189,23 +189,38 @@
     }
   };
 
-  function setLanguage(lang) {
-    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-    const buttons = document.querySelectorAll('.lang-btn');
-    if (lang === 'hu') buttons[0].classList.add('active');
-    if (lang === 'en') buttons[1].classList.add('active');
-    if (lang === 'jp') buttons[2].classList.add('active');
+ function setLanguage(lang) {
+  try {
+    localStorage.setItem("selectedLanguage", lang);
+  } catch (e) {}
 
-    const selected = translations[lang];
-    Object.keys(selected).forEach(id => {
-      const element = document.getElementById(id);
-      if (element) {
-        element.textContent = selected[id];
-      }
-    });
+  document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+  const buttons = document.querySelectorAll('.lang-btn');
 
-    document.documentElement.lang = lang === 'jp' ? 'ja' : lang;
-  }
+  if (lang === 'hu') buttons[0].classList.add('active');
+  if (lang === 'en') buttons[1].classList.add('active');
+  if (lang === 'jp') buttons[2].classList.add('active');
+
+  const selected = translations[lang];
+  Object.keys(selected).forEach(id => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.textContent = selected[id];
+    }
+  });
+
+  document.documentElement.lang = lang === 'jp' ? 'ja' : lang;
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  let savedLanguage = "hu";
+
+  try {
+    savedLanguage = localStorage.getItem("selectedLanguage") || "hu";
+  } catch (e) {}
+
+  setLanguage(savedLanguage);
+});
 </script>
 
 <script>
