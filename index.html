@@ -67,27 +67,47 @@ href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
     <h2>📸 Galéria</h2>
 
     <div class="gallery-preview">
-        <a href="Kepek/tanabata1.jpg" class="glightbox" data-gallery="ennichi">
+        <button type="button" class="gallery-thumb-open" onclick="openGallery(0)">
             <img src="Kepek/tanabata1.jpg" alt="Tanabata fesztiválkép 1" loading="lazy">
-        </a>
+        </button>
 
-        <a href="Kepek/tanabata2.jpg" class="glightbox" data-gallery="ennichi">
+        <button type="button" class="gallery-thumb-open" onclick="openGallery(1)">
             <img src="Kepek/tanabata2.jpg" alt="Tanabata fesztiválkép 2" loading="lazy">
-        </a>
+        </button>
 
-        <a href="Kepek/momiji1.jpeg" class="glightbox" data-gallery="ennichi">
+        <button type="button" class="gallery-thumb-open" onclick="openGallery(2)">
             <img src="Kepek/momiji1.jpeg" alt="Momiji rendezvénykép" loading="lazy">
-        </a>
+        </button>
     </div>
 
     <div class="gallery-actions">
-        <a href="Kepek/japannap1.jpeg" class="glightbox gallery-open-all button" data-gallery="ennichi">
+        <button type="button" class="gallery-open-all button" onclick="openGallery(0)">
             Galéria megnyitása
-        </a>
+        </button>
     </div>
+</div>
 
-    <div class="gallery-hidden">
-        <a href="Kepek/japannap2.jpeg" class="glightbox" data-gallery="ennichi" aria-hidden="true" tabindex="-1"></a>
+<div id="customGalleryModal" class="custom-gallery-modal" aria-hidden="true">
+    <div class="custom-gallery-backdrop" onclick="closeGallery()"></div>
+
+    <div class="custom-gallery-content">
+        <button type="button" class="custom-gallery-close" onclick="closeGallery()" aria-label="Galéria bezárása">
+            ✕
+        </button>
+
+        <button type="button" class="custom-gallery-nav prev" onclick="changeImage(-1)" aria-label="Előző kép">
+            ❮
+        </button>
+
+        <div class="custom-gallery-main">
+            <img id="galleryMainImage" src="" alt="">
+        </div>
+
+        <button type="button" class="custom-gallery-nav next" onclick="changeImage(1)" aria-label="Következő kép">
+            ❯
+        </button>
+
+        <div class="custom-gallery-thumbs" id="galleryThumbs"></div>
     </div>
 </div>
 
@@ -95,22 +115,96 @@ href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
   © Ennichi - Japán fesztivál élmény
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-
 <script>
-const lightbox = GLightbox({
-    selector: '.glightbox',
-    loop: true,
-    touchNavigation: true,
-    keyboardNavigation: true,
-    zoomable: true,
-    draggable: true,
+const galleryImages = [
+    {
+        src: "Kepek/tanabata1.jpg",
+        alt: "Tanabata fesztiválkép 1"
+    },
+    {
+        src: "Kepek/tanabata2.jpg",
+        alt: "Tanabata fesztiválkép 2"
+    },
+    {
+        src: "Kepek/momiji1.jpeg",
+        alt: "Momiji rendezvénykép"
+    },
+    {
+        src: "Kepek/japannap1.jpeg",
+        alt: "Japán nap rendezvénykép 1"
+    },
+    {
+        src: "Kepek/japannap2.jpeg",
+        alt: "Japán nap rendezvénykép 2"
+    }
+];
 
-    openEffect: 'zoom',
-    closeEffect: 'fade',
-    slideEffect: 'slide',
+let currentGalleryIndex = 0;
 
-    autoplayVideos: false
+const modal = document.getElementById("customGalleryModal");
+const mainImage = document.getElementById("galleryMainImage");
+const thumbsContainer = document.getElementById("galleryThumbs");
+
+function renderThumbnails() {
+    thumbsContainer.innerHTML = "";
+
+    galleryImages.forEach((image, index) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "custom-gallery-thumb" + (index === currentGalleryIndex ? " active" : "");
+        btn.setAttribute("aria-label", `Kép megnyitása ${index + 1}`);
+
+        btn.innerHTML = `<img src="${image.src}" alt="${image.alt}" loading="lazy">`;
+        btn.addEventListener("click", () => {
+            currentGalleryIndex = index;
+            updateGallery();
+        });
+
+        thumbsContainer.appendChild(btn);
+    });
+}
+
+function updateGallery() {
+    const image = galleryImages[currentGalleryIndex];
+    mainImage.src = image.src;
+    mainImage.alt = image.alt;
+    renderThumbnails();
+}
+
+function openGallery(index = 0) {
+    currentGalleryIndex = index;
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("gallery-open");
+    updateGallery();
+}
+
+function closeGallery() {
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("gallery-open");
+}
+
+function changeImage(direction) {
+    currentGalleryIndex += direction;
+
+    if (currentGalleryIndex < 0) {
+        currentGalleryIndex = galleryImages.length - 1;
+    }
+
+    if (currentGalleryIndex >= galleryImages.length) {
+        currentGalleryIndex = 0;
+    }
+
+    updateGallery();
+}
+
+document.addEventListener("keydown", function(e) {
+    if (!modal.classList.contains("open")) return;
+
+    if (e.key === "Escape") closeGallery();
+    if (e.key === "ArrowLeft") changeImage(-1);
+    if (e.key === "ArrowRight") changeImage(1);
 });
 </script>
   
