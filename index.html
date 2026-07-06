@@ -62,46 +62,32 @@ href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
   </div>
 
   <div id="gallery" class="card">
-
     <h2>📸 Galéria</h2>
 
-    <div class="gallery">
-
-            <a href="Kepek/tanabata1.jpg"
-           class="glightbox"
-           data-gallery="ennichi">
-
-            <img src="Kepek/tanabata1.jpg" alt="">
+    <div class="gallery gallery-preview">
+        <a href="Kepek/tanabata1.jpg" class="glightbox" data-gallery="ennichi">
+            <img src="Kepek/tanabata1.jpg" alt="Tanabata fesztiválkép 1">
         </a>
 
-      <a href="Kepek/tanabata2.jpg"
-           class="glightbox"
-           data-gallery="ennichi">
-
-            <img src="Kepek/tanabata2.jpg" alt="">
-        </a>
-      
-        <a href="Kepek/momiji1.jpeg"
-           class="glightbox"
-           data-gallery="ennichi">
-
-            <img src="Kepek/momiji1.jpeg" alt="">
+        <a href="Kepek/tanabata2.jpg" class="glightbox" data-gallery="ennichi">
+            <img src="Kepek/tanabata2.jpg" alt="Tanabata fesztiválkép 2">
         </a>
 
-        <a href="Kepek/japannap1.jpeg"
-           class="glightbox"
-           data-gallery="ennichi">
-
-            <img src="Kepek/japannap1.jpeg" alt="">
+        <a href="Kepek/momiji1.jpeg" class="glightbox" data-gallery="ennichi">
+            <img src="Kepek/momiji1.jpeg" alt="Momiji rendezvénykép">
         </a>
+    </div>
 
-        <a href="Kepek/japannap2.jpeg"
-           class="glightbox"
-           data-gallery="ennichi">
-
-            <img src="Kepek/japannap2.jpeg" alt="">
+    <div class="gallery-actions">
+        <a href="Kepek/japannap1.jpeg" class="glightbox gallery-open-all button" data-gallery="ennichi">
+            + Még 2 kép megnyitása
         </a>
-      
+    </div>
+
+    <!-- Rejtett képek: nem látszanak az oldalon, de benne vannak a lightboxban -->
+    <div class="gallery-hidden">
+        <a href="Kepek/japannap1.jpeg" class="glightbox" data-gallery="ennichi" aria-hidden="true" tabindex="-1"></a>
+        <a href="Kepek/japannap2.jpeg" class="glightbox" data-gallery="ennichi" aria-hidden="true" tabindex="-1"></a>
     </div>
 </div>
 </div>
