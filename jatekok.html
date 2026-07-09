@@ -147,6 +147,7 @@ const translations = {
     altRadir: "Radír Lottó",
     altSenbonbiki: "Senbonbiki",
     altCatmachine: "Cicás Nyereménygép",
+    moreText: "Minden eseményre változó játékválogatással készülünk, így az adott rendezvényen elérhető játékok eltérhetnek.",
     footerText: "© Ennichi - Japán fesztivál élmény"
   },
   en: {
@@ -240,7 +241,7 @@ function setLanguage(lang) {
   document.getElementById("alt-radir").alt = translations[lang].altRadir;
   document.getElementById("alt-senbonbiki").alt = translations[lang].altSenbonbiki;
   document.getElementById("alt-catmachine").alt = translations[lang].altCatmachine;
-
+  document.getElementById("more-text").textContent = translations[lang].moreText;
   document.getElementById("footer-text").textContent = translations[lang].footerText;
 
   document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("active"));
