@@ -3,194 +3,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APP | Ennichi</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+
+    <title>Alkalmazások | Ennichi</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@1,700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="Kepek/ennichi.ico">
 </head>
+
 <body>
 
 <nav>
-  <a href="index.html" class="logo">
-    <img src="Kepek/ennichi.jpg" alt="Ennichi logó" id="logo-img">
-  </a>
+    <a href="index.html" class="logo">
+        <img
+            src="Kepek/ennichi.jpg"
+            alt="Ennichi logó"
+            id="logo-img">
+    </a>
 
-  <div class="menu">
-    <a href="esemenyek.html" id="nav-events">Események</a>
-    <a href="termekek.html" id="nav-products">Termékek</a>
-    <a href="jatekok.html" id="nav-games">Játékok</a>
-    <a href="app.html" id="nav-app">APP</a>
-  </div>
+    <div class="menu">
+        <a href="esemenyek.html" id="nav-events">Események</a>
+        <a href="termekek.html" id="nav-products">Termékek</a>
+        <a href="jatekok.html" id="nav-games">Játékok</a>
+        <a href="app.html" id="nav-app">APP</a>
+    </div>
 
-  <div class="lang-switcher">
-    <button type="button" class="lang-btn active" onclick="setLanguage('hu')" aria-label="Magyar nyelv">🇭🇺</button>
-    <button type="button" class="lang-btn" onclick="setLanguage('en')" aria-label="English language">🇬🇧</button>
-    <button type="button" class="lang-btn" onclick="setLanguage('jp')" aria-label="日本語">🇯🇵</button>
-  </div>
+    <div class="lang-switcher">
+        <button
+            type="button"
+            class="lang-btn active"
+            onclick="setLanguage('hu')"
+            aria-label="Magyar nyelv">
+            🇭🇺
+        </button>
+
+        <button
+            type="button"
+            class="lang-btn"
+            onclick="setLanguage('en')"
+            aria-label="English language">
+            🇬🇧
+        </button>
+
+        <button
+            type="button"
+            class="lang-btn"
+            onclick="setLanguage('jp')"
+            aria-label="日本語">
+            🇯🇵
+        </button>
+    </div>
 </nav>
-    
+
 <main class="container">
 
-    <h1 class="wb-stl-custom1" id="page-heading">APP</h1>
+    <h1 class="wb-stl-custom1" id="page-heading">
+        Japán nyelvi alkalmazások
+    </h1>
 
     <div class="apps-grid">
 
-        <div class="app-card">
-  <img
-    src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/4c/20/84/4c2084ef-0a31-43d9-4554-793fff844f0b/Placeholder.mill/200x200bb-75.webp"
-    alt="Usagi Nihongo"
-    id="alt-usaginihongo"
-    width="200"
-    height="200">
+        <!-- Usagi Nihongo -->
+        <article class="app-card">
 
-  <div class="app-content">
-    <h2 id="app1-title">Usagi Nihongo</h2>
+            <a
+                href="https://apps.apple.com/hu/app/usagi-nihongo/id6761908995?l=hu"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="app-image-link"
+                aria-label="Usagi Nihongo megnyitása az App Store-ban">
 
-    <p id="app1-text">
-      Japán nyelvtanuló alkalmazás kezdőknek és japánul tanulóknak.
-    </p>
+                <img
+                    src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/4c/20/84/4c2084ef-0a31-43d9-4554-793fff844f0b/Placeholder.mill/200x200bb-75.webp"
+                    alt="Usagi Nihongo alkalmazás ikonja"
+                    id="alt-usaginihongo"
+                    width="200"
+                    height="200"
+                    loading="lazy">
+            </a>
 
-    <a
-      href="https://apps.apple.com/hu/app/usagi-nihongo/id6761908995?l=hu"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="app-store-link"
-      id="app1-link">
-      Megnyitás az App Store-ban
-    </a>
-  </div>
-</div>
+            <div class="app-content">
+                <h2 id="app1-title">
+                    Usagi Nihongo
+                </h2>
 
-<div class="app-card">
-  <img
-    src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/6b/fc/fd/6bfcfdac-ccae-8989-c1a0-144f498bf41f/Placeholder.mill/200x200bb-75.webp"
-    alt="Usagi Jisho"
-    id="alt-usagijisho"
-    width="200"
-    height="200">
+                <p id="app1-text">
+                    Játékos és könnyen használható alkalmazás a japán nyelv tanulásához.
+                </p>
+            </div>
 
-  <div class="app-content">
-    <h2 id="app2-title">Usagi Jisho</h2>
+        </article>
 
-    <p id="app2-text">
-      Japán–magyar szótár egyszerű, gyors és letisztult felülettel.
-    </p>
+        <!-- Usagi Jisho -->
+        <article class="app-card">
 
-    <a
-      href="https://apps.apple.com/hu/app/usagi-jisho/id6811550857?l=hu"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="app-store-link"
-      id="app2-link">
-      Megnyitás az App Store-ban
-    </a>
-  </div>
-</div>
-       
+            <a
+                href="https://apps.apple.com/hu/app/usagi-jisho/id6811550857?l=hu"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="app-image-link"
+                aria-label="Usagi Jisho megnyitása az App Store-ban">
+
+                <img
+                    src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/6b/fc/fd/6bfcfdac-ccae-8989-c1a0-144f498bf41f/Placeholder.mill/200x200bb-75.webp"
+                    alt="Usagi Jisho alkalmazás ikonja"
+                    id="alt-usagijisho"
+                    width="200"
+                    height="200"
+                    loading="lazy">
+            </a>
+
+            <div class="app-content">
+                <h2 id="app2-title">
+                    Usagi Jisho
+                </h2>
+
+                <p id="app2-text">
+                    Japán–magyar szótár egyszerű, gyors és letisztult felülettel.
+                </p>
+            </div>
+
+        </article>
+
     </div>
 
 </main>
-    
+
 <footer id="footer-text">
-  © Ennichi - Japán fesztivál élmény
+    © Ennichi - Japán fesztivál élmény
 </footer>
 
 <script>
 const translations = {
-  hu: {
-    pageTitle: "Játékok | Ennichi",
-    navEvents: "Események",
-    navProducts: "Termékek",
-    navGames: "Játékok",
-    pageHeading: "APP",
-    app1Title: "Usagi Nihongo",
-    app1Text: "",
-    app2Title: "Usagi Jisho",
-    app2Text: "Usagi Jisho – japán–magyar szótár egyszerű, gyors és letisztult felülettel.",
-    altLogo: "Ennichi logó",
+    hu: {
+        pageTitle: "Alkalmazások | Ennichi",
+        navEvents: "Események",
+        navProducts: "Termékek",
+        navGames: "Játékok",
+        navApp: "APP",
 
-    footerText: "© Ennichi - Japán fesztivál élmény"
-  },
-  en: {
-  pageTitle: "Apps | Ennichi",
-  navEvents: "Events",
-  navProducts: "Products",
-  navGames: "Games",
-  navApps: "Apps",
-  pageHeading: "Japanese language apps",
+        pageHeading: "Japán nyelvi alkalmazások",
 
-  app1Title: "Usagi Nihongo",
-  app1Text: "A fun and easy-to-use app for learning Japanese.",
+        app1Title: "Usagi Nihongo",
+        app1Text: "Játékos és könnyen használható alkalmazás a japán nyelv tanulásához.",
 
-  app2Title: "Usagi Jisho",
-  app2Text: "A simple and fast Japanese–Hungarian dictionary.",
+        app2Title: "Usagi Jisho",
+        app2Text: "Japán–magyar szótár egyszerű, gyors és letisztult felülettel.",
 
-  altLogo: "Ennichi logo",
-  altUsagiNihongo: "Usagi Nihongo app icon",
-  altUsagiJisho: "Usagi Jisho app icon",
+        altLogo: "Ennichi logó",
+        altUsagiNihongo: "Usagi Nihongo alkalmazás ikonja",
+        altUsagiJisho: "Usagi Jisho alkalmazás ikonja",
 
-  appLinkText: "Open in the App Store",
-  footerText: "© Ennichi - Japanese festival experience"
-}
- jp: {
-  pageTitle: "アプリ | Ennichi",
-  navEvents: "イベント",
-  navProducts: "商品",
-  navGames: "ゲーム",
-  navApps: "アプリ",
-  pageHeading: "日本語学習アプリ",
+        footerText: "© Ennichi - Japán fesztivál élmény"
+    },
 
-  app1Title: "Usagi Nihongo",
-  app1Text: "楽しく簡単に日本語を学べるアプリです。",
+    en: {
+        pageTitle: "Apps | Ennichi",
+        navEvents: "Events",
+        navProducts: "Products",
+        navGames: "Games",
+        navApp: "Apps",
 
-  app2Title: "Usagi Jisho",
-  app2Text: "シンプルで使いやすい日本語・ハンガリー語辞書です。",
+        pageHeading: "Japanese language apps",
 
-  altLogo: "Ennichi ロゴ",
-  altUsagiNihongo: "Usagi Nihongoアプリのアイコン",
-  altUsagiJisho: "Usagi Jishoアプリのアイコン",
+        app1Title: "Usagi Nihongo",
+        app1Text: "A fun and easy-to-use app for learning Japanese.",
 
-  appLinkText: "App Storeで見る",
-  footerText: "© Ennichi - 日本のお祭り体験"
-}
+        app2Title: "Usagi Jisho",
+        app2Text: "A simple and fast Japanese–Hungarian dictionary.",
+
+        altLogo: "Ennichi logo",
+        altUsagiNihongo: "Usagi Nihongo app icon",
+        altUsagiJisho: "Usagi Jisho app icon",
+
+        footerText: "© Ennichi - Japanese festival experience"
+    },
+
+    jp: {
+        pageTitle: "アプリ | Ennichi",
+        navEvents: "イベント",
+        navProducts: "商品",
+        navGames: "ゲーム",
+        navApp: "アプリ",
+
+        pageHeading: "日本語学習アプリ",
+
+        app1Title: "Usagi Nihongo",
+        app1Text: "楽しく簡単に日本語を学べるアプリです。",
+
+        app2Title: "Usagi Jisho",
+        app2Text: "シンプルで使いやすい日本語・ハンガリー語辞書です。",
+
+        altLogo: "Ennichi ロゴ",
+        altUsagiNihongo: "Usagi Nihongoアプリのアイコン",
+        altUsagiJisho: "Usagi Jishoアプリのアイコン",
+
+        footerText: "© Ennichi - 日本のお祭り体験"
+    }
 };
 
 function setLanguage(lang) {
-  try {
-    localStorage.setItem("selectedLanguage", lang);
-  } catch (e) {}
+    try {
+        localStorage.setItem("selectedLanguage", lang);
+    } catch (e) {}
 
-  document.documentElement.lang = lang;
-  document.title = translations[lang].pageTitle;
+    const text = translations[lang];
 
-  document.getElementById("nav-events").textContent = translations[lang].navEvents;
-  document.getElementById("nav-products").textContent = translations[lang].navProducts;
-  document.getElementById("nav-games").textContent = translations[lang].navGames;
-  document.getElementById("page-heading").textContent = translations[lang].pageHeading;
+    document.documentElement.lang = lang;
+    document.title = text.pageTitle;
 
-  document.getElementById("app1-title").textContent = translations[lang].game1Title;
-  document.getElementById("app1-text").textContent = translations[lang].game1Text;
-  document.getElementById("app2-title").textContent = translations[lang].game2Title;
-  document.getElementById("app2-text").textContent = translations[lang].game2Text;
+    document.getElementById("nav-events").textContent = text.navEvents;
+    document.getElementById("nav-products").textContent = text.navProducts;
+    document.getElementById("nav-games").textContent = text.navGames;
+    document.getElementById("nav-app").textContent = text.navApp;
 
-  document.getElementById("logo-img").alt = translations[lang].altLogo;
-    
-  document.getElementById("footer-text").textContent = translations[lang].footerText;
+    document.getElementById("page-heading").textContent = text.pageHeading;
 
-  document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("active"));
-  document.querySelector(`[onclick="setLanguage('${lang}')"]`).classList.add("active");
+    document.getElementById("app1-title").textContent = text.app1Title;
+    document.getElementById("app1-text").textContent = text.app1Text;
+
+    document.getElementById("app2-title").textContent = text.app2Title;
+    document.getElementById("app2-text").textContent = text.app2Text;
+
+    document.getElementById("logo-img").alt = text.altLogo;
+    document.getElementById("alt-usaginihongo").alt = text.altUsagiNihongo;
+    document.getElementById("alt-usagijisho").alt = text.altUsagiJisho;
+
+    document.getElementById("footer-text").textContent = text.footerText;
+
+    document.querySelectorAll(".lang-btn").forEach(button => {
+        button.classList.remove("active");
+    });
+
+    const activeButton = document.querySelector(
+        `[onclick="setLanguage('${lang}')"]`
+    );
+
+    if (activeButton) {
+        activeButton.classList.add("active");
+    }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  let savedLanguage = "hu";
+    let savedLanguage = "hu";
 
-  try {
-    savedLanguage = localStorage.getItem("selectedLanguage") || "hu";
-  } catch (e) {}
+    try {
+        savedLanguage =
+            localStorage.getItem("selectedLanguage") || "hu";
+    } catch (e) {}
 
-  setLanguage(savedLanguage);
+    setLanguage(savedLanguage);
 });
 </script>
-    
+
 </body>
 </html>
