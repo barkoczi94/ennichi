@@ -763,3 +763,53 @@ body.gallery-open {
         flex-basis: auto;
     }
 }
+.app-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    min-width: 0;
+    min-height: 230px;
+    padding: 1.5rem;
+
+    border: 1px solid rgba(60, 35, 25, 0.12);
+    border-radius: 1rem;
+    background: #f4eee7;
+
+    color: inherit;
+    font-family: inherit;
+    text-decoration: none;
+
+    box-shadow: 0 8px 24px rgba(50, 35, 25, 0.12);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.app-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(50, 35, 25, 0.2);
+}
+
+.app-card:focus-visible {
+    outline: 3px solid #9f1d24;
+    outline-offset: 5px;
+}
+
+.app-card h2,
+.app-card p {
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+}
+
+.app-card h2 {
+    margin: 0 0 0.75rem;
+    color: #24324d;
+    font-weight: 700;
+}
+
+.app-card p {
+    margin: 0;
+    color: #333333;
+    font-weight: 400;
+    line-height: 1.6;
+}
