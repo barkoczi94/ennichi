@@ -803,8 +803,14 @@ body.gallery-open {
 
 .app-card h2 {
     margin: 0 0 0.75rem;
-    color: #24324d;
+    color: #b3002d;
+    font-family: "Montserrat", sans-serif;
     font-weight: 700;
+    text-decoration: none;
+}
+
+.app-card:hover h2 {
+    color: #8f0024;
 }
 
 .app-card p {
