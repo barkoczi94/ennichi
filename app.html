@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APP | Ennichi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="Kepek/ennichi.ico">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">
+    <img src="Kepek/ennichi.jpg" alt="Ennichi logó" id="logo-img">
+  </a>
+
+  <div class="menu">
+    <a href="esemenyek.html" id="nav-events">Események</a>
+    <a href="termekek.html" id="nav-products">Termékek</a>
+    <a href="jatekok.html" id="nav-games">Játékok</a>
+    <a href="app.html" id="nav-games">APP</a>
+  </div>
+
+  <div class="lang-switcher">
+    <button type="button" class="lang-btn active" onclick="setLanguage('hu')" aria-label="Magyar nyelv">🇭🇺</button>
+    <button type="button" class="lang-btn" onclick="setLanguage('en')" aria-label="English language">🇬🇧</button>
+    <button type="button" class="lang-btn" onclick="setLanguage('jp')" aria-label="日本語">🇯🇵</button>
+  </div>
+</nav>
+    
+<main class="container">
+
+    <h1 class="wb-stl-custom1" id="page-heading">Játékaink</h1>
+
+    <div class="games-grid">
+
+        <div class="game-card">
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/4c/20/84/4c2084ef-0a31-43d9-4554-793fff844f0b/Placeholder.mill/200x200bb-75.webp" alt="Usagi Nihongo" id="alt-usaginihongo">
+            <div class="game-content">
+                <h2 id="game1-title">Usagi Nihongo</h2>
+                <p id="game1-text">
+                   https://apps.apple.com/hu/app/usagi-nihongo/id6761908995?l=hu
+                </p>
+            </div>
+        </div>
+        
+        <div class="game-card">
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/6b/fc/fd/6bfcfdac-ccae-8989-c1a0-144f498bf41f/Placeholder.mill/200x200bb-75.webp" alt="Usagi Jisho" id="alt-usagijisho">
+            <div class="game-content">
+                <h2 id="game2-title">Usagi Jisho</h2>
+                <p id="game2-text">
+                    https://apps.apple.com/hu/app/usagi-jisho/id6811550857?l=hu
+                </p>
+            </div>
+        </div>
+     
+       
+    </div>
+
+</main>
+    
+<footer id="footer-text">
+  © Ennichi - Japán fesztivál élmény
+</footer>
+
+<script>
+const translations = {
+  hu: {
+    pageTitle: "Játékok | Ennichi",
+    navEvents: "Események",
+    navProducts: "Termékek",
+    navGames: "Játékok",
+    pageHeading: "Játékaink",
+    game1Title: "🎈 Super Ball Halászat 🎈",
+    game1Text: "Ebben a mókás játékban egy „poi” nevű, papírból készült kis hálóval kell a vízben úszó színes szuperlabdákat kihalászni! 💦 De vigyázz – a papír könnyen elszakad, így ügyességre és gyorsaságra is szükséged lesz! ✨ Egyszerű, mégis nagyon izgalmas játék, amit Japán nyári fesztiváljain mindenki imád! 🇯🇵🎉",
+    game2Title: "🩵 Vízi Jojó Horgászat 🩵",
+    game2Text: "A vízi jojó horgászat a japán nyári matsurik egyik legnépszerűbb és legvidámabb játéka! 🎐🎈 A feladat egyszerűnek tűnik: fogj ki minél több színes, vízzel töltött jojót egy különleges papírhurokkal! 💦✨ De vigyázz, a papír könnyen elszakad, így minden próbálkozás izgalmas kihívás! 💖 Ez a hagyományos japán ügyességi játék kicsiknek és nagyoknak egyaránt hatalmas élmény, és garantáltan igazi matsuri hangulatot varázsol bármilyen rendezvényre! 🌸🐰",
+    game3Title: "🩷 Katanuki 🩷",
+    game3Text: "A Katanuki egy hagyományos japán matsuri ügyességi játék, ahol egy apró tű segítségével kell óvatosan kivágni a mintát egy törékeny cukorlapból! 🍭✨ Elsőre könnyűnek tűnhet, de csak biztos kézzel és sok türelemmel sikerül egyben tartani a figurát! 🌸💖 A Katanuki generációk óta a japán fesztiválok kedvence, ahol minden sikeresen kivágott minta igazi kis győzelem! 🎉 Próbáld ki te is, és derítsd ki, sikerül-e hibátlanul teljesítened a kihívást! 🐰🌟",
+    game4Title: "🩵 Radír Lottó 🩵",
+    game4Text: "A radíros sorsjegy egy mókás szerencsejáték, ahol a nyeremények között aranyos radírok rejtőznek! ✨ Régen az édességboltokban lehetett kapni, így sokaknak igazi nosztalgikus kedvenc! 🍬 Ma is gyakran találkozhatsz vele fesztiválokon, rendezvényeken és iskolai ünnepségeken — egyszerű, mégis nagyon szórakoztató játék, ami mindig meglepetést tartogat! 🎁💫",
+    game5Title: "🎀 Senbonbiki 🎀",
+    game5Text: "A „Senbonbiki” egy vidám szerencsejáték, amit gyakran láthatsz japán fesztiválokon! 🎉 Előtted rengeteg színes zsinór lóg, és csak annyit kell tenned, hogy kiválasztasz egyet és meghúzod! ✨ A zsinór végén egy meglepetés ajándék vár rád – minden húzás nyer! 🎁 Egyszerű, izgalmas és garantáltan mosolyt csal az arcodra! 😄",
+    game6Title: "🎯 Cicás Nyereménygép 🎯",
+    game6Text: "A Cicás Nyereménygép egy izgalmas játék, ami a valódi daruautomaták működését utánozza – pont, mint a nagyoknak szóló verziókban! 🤖✨ A cél egyszerű: a vezérlőkarral ügyesen irányítva meg kell ragadnod a gépben lévő dolgokat! 🐰💖 Szuper szórakozás kicsiknek, tele izgalommal és sikerélménnyel — vajon mit sikerül kiszedned? 🎀🎁",
+    altLogo: "Ennichi logó",
+    altSuperball: "Super Ball Halászat",
+    altYoyo: "Vízi Jojó",
+    altKatanuki: "Katanuki",
+    altRadir: "Radír Lottó",
+    altSenbonbiki: "Senbonbiki",
+    altCatmachine: "Cicás Nyereménygép",
+    moreText: "Minden eseményre változó játékválogatással készülünk, így az adott rendezvényen elérhető játékok eltérhetnek.",
+    footerText: "© Ennichi - Japán fesztivál élmény"
+  },
+  en: {
+    pageTitle: "Games | Ennichi",
+    navEvents: "Events",
+    navProducts: "Products",
+    navGames: "Games",
+    pageHeading: "Our Games",
+    game1Title: "🎈 Super Ball Fishing 🎈",
+    game1Text: "In this fun game, you use a small paper scoop called a poi to catch colorful super balls floating in water. 💦 Be careful — the paper tears easily, so you will need both skill and quick hands. ✨ It is simple, exciting, and loved by everyone at Japanese summer festivals. 🇯🇵🎉",
+    game2Title: "🩵 Water Yo-Yo Fishing 🩵",
+    game2Text: "Water yo-yo fishing is one of the most popular and cheerful games at Japanese summer matsuri festivals. 🎐🎈 The task looks easy: catch as many colorful water-filled yo-yos as you can with a special paper loop. 💦✨ But watch out, the paper breaks easily, so every try is an exciting challenge. 💖 This traditional Japanese skill game is a big hit with both children and adults and brings real matsuri atmosphere to any event. 🌸🐰",
+    game3Title: "🩷 Katanuki 🩷",
+    game3Text: "Katanuki is a traditional Japanese festival skill game where you carefully cut out a shape from a fragile candy sheet using a small needle. 🍭✨ It may look easy at first, but only a steady hand and a lot of patience will keep the figure intact. 🌸💖 Katanuki has been a favorite at Japanese festivals for generations, and every successfully cut shape feels like a small victory. 🎉 Try it and see whether you can complete the challenge perfectly. 🐰🌟",
+    game4Title: "🩵 Eraser Lottery 🩵",
+    game4Text: "The eraser lottery is a fun game of chance where cute erasers are hidden among the prizes. ✨ In the past, it was often sold in candy shops, which makes it a nostalgic favorite for many people. 🍬 Even today, you can often find it at festivals, events, and school celebrations — a simple but very entertaining game that always holds a surprise. 🎁💫",
+    game5Title: "🎀 Senbonbiki 🎀",
+    game5Text: "Senbonbiki is a cheerful game of chance often seen at Japanese festivals. 🎉 Many colorful strings hang in front of you, and all you have to do is choose one and pull it. ✨ A surprise gift waits at the end of the string — every pull wins a prize. 🎁 It is simple, exciting, and guaranteed to bring a smile to your face. 😄",
+    game6Title: "🎯 Cat Prize Machine 🎯",
+    game6Text: "The Cat Prize Machine is an exciting game that imitates the way real claw machines work — just like the larger arcade versions. 🤖✨ The goal is simple: use the control lever skillfully to grab the items inside the machine. 🐰💖 It is great fun for children, full of excitement and a sense of achievement — what will you manage to win? 🎀🎁",
+    altLogo: "Ennichi logo",
+    altSuperball: "Super Ball Fishing",
+    altYoyo: "Water Yo-Yo Fishing",
+    altKatanuki: "Katanuki",
+    altRadir: "Eraser Lottery",
+    altSenbonbiki: "Senbonbiki",
+    altCatmachine: "Cat Prize Machine",
+    moreText: "We prepare a changing selection of games for each event, so the games available may vary from one venue to another.",
+    footerText: "© Ennichi - Japanese festival experience"
+  },
+  jp: {
+    pageTitle: "ゲーム | Ennichi",
+    navEvents: "イベント",
+    navProducts: "商品",
+    navGames: "ゲーム",
+    pageHeading: "ゲーム紹介",
+    game1Title: "🎈 スーパーボールすくい 🎈",
+    game1Text: "この楽しい遊びでは、「ポイ」と呼ばれる紙の小さな網を使って、水に浮かぶカラフルなスーパーボールをすくいます。💦 でも気をつけてください。紙はすぐに破れてしまうので、器用さと素早さが必要です。✨ シンプルですがとても盛り上がる、日本の夏祭りで大人気の遊びです。🇯🇵🎉",
+    game2Title: "🩵 水ヨーヨーつり 🩵",
+    game2Text: "水ヨーヨーつりは、日本の夏祭りでとても人気のある楽しい遊びの一つです。🎐🎈 特別な紙の輪を使って、水の入ったカラフルなヨーヨーをできるだけ多く釣り上げます。💦✨ ただし紙は切れやすいので、毎回がドキドキの挑戦です。💖 子どもから大人まで楽しめる、まつりらしい雰囲気いっぱいの伝統的な遊びです。🌸🐰",
+    game3Title: "🩷 型抜き 🩷",
+    game3Text: "型抜きは、日本の祭りで親しまれている伝統的な遊びです。小さな針を使って、もろい砂糖板から模様を丁寧に切り抜きます。🍭✨ 一見簡単そうに見えますが、形を崩さずに仕上げるには、安定した手とたくさんの忍耐が必要です。🌸💖 何世代にもわたって愛されてきた祭りの定番で、うまく切り抜けたときの達成感は格別です。🎉 あなたもぜひ挑戦してみてください。🐰🌟",
+    game4Title: "🩵 消しゴムくじ 🩵",
+    game4Text: "消しゴムくじは、かわいい消しゴムが景品になっている楽しいくじ引きです。✨ 昔は駄菓子屋でよく売られていたので、多くの人にとって懐かしい存在です。🍬 今でもお祭りやイベント、学校行事などで見かけることがあり、シンプルなのにとても楽しく、いつもワクワクする驚きがあります。🎁💫",
+    game5Title: "🎀 千本引き 🎀",
+    game5Text: "千本引きは、日本のお祭りでよく見られる楽しいくじ遊びです。🎉 目の前にたくさんのカラフルなひもが垂れていて、その中から一本選んで引くだけです。✨ ひもの先にはサプライズの景品が待っていて、どれを引いても当たりです。🎁 シンプルでワクワクする、思わず笑顔になる遊びです。😄",
+    game6Title: "🎯 ねこクレーンゲーム 🎯",
+    game6Text: "ねこクレーンゲームは、本物のクレーンゲームの仕組みを再現したワクワクする遊びです。🤖✨ レバーを上手に操作して、中に入っている景品をつかむのが目標です。🐰💖 子どもたちに大人気で、ドキドキと達成感をたっぷり味わえます。どんな景品が取れるでしょうか。🎀🎁",
+    altLogo: "Ennichi ロゴ",
+    altSuperball: "スーパーボールすくい",
+    altYoyo: "水ヨーヨーつり",
+    altKatanuki: "型抜き",
+    altRadir: "消しゴムくじ",
+    altSenbonbiki: "千本引き",
+    altCatmachine: "ねこクレーンゲーム",
+    moreText: "各イベントごとに異なるゲームを用意しているため、会場によって遊べるゲームは異なる場合があります。",
+    footerText: "© Ennichi - 日本のお祭り体験"
+  }
+};
+
+function setLanguage(lang) {
+  try {
+    localStorage.setItem("selectedLanguage", lang);
+  } catch (e) {}
+
+  document.documentElement.lang = lang;
+  document.title = translations[lang].pageTitle;
+
+  document.getElementById("nav-events").textContent = translations[lang].navEvents;
+  document.getElementById("nav-products").textContent = translations[lang].navProducts;
+  document.getElementById("nav-games").textContent = translations[lang].navGames;
+  document.getElementById("page-heading").textContent = translations[lang].pageHeading;
+
+  document.getElementById("game1-title").textContent = translations[lang].game1Title;
+  document.getElementById("game1-text").textContent = translations[lang].game1Text;
+  document.getElementById("game2-title").textContent = translations[lang].game2Title;
+  document.getElementById("game2-text").textContent = translations[lang].game2Text;
+  document.getElementById("game3-title").textContent = translations[lang].game3Title;
+  document.getElementById("game3-text").textContent = translations[lang].game3Text;
+  document.getElementById("game4-title").textContent = translations[lang].game4Title;
+  document.getElementById("game4-text").textContent = translations[lang].game4Text;
+  document.getElementById("game5-title").textContent = translations[lang].game5Title;
+  document.getElementById("game5-text").textContent = translations[lang].game5Text;
+  document.getElementById("game6-title").textContent = translations[lang].game6Title;
+  document.getElementById("game6-text").textContent = translations[lang].game6Text;
+
+  document.getElementById("logo-img").alt = translations[lang].altLogo;
+  document.getElementById("alt-superball").alt = translations[lang].altSuperball;
+  document.getElementById("alt-yoyo").alt = translations[lang].altYoyo;
+  document.getElementById("alt-katanuki").alt = translations[lang].altKatanuki;
+  document.getElementById("alt-radir").alt = translations[lang].altRadir;
+  document.getElementById("alt-senbonbiki").alt = translations[lang].altSenbonbiki;
+  document.getElementById("alt-catmachine").alt = translations[lang].altCatmachine;
+  document.getElementById("more-text").textContent = translations[lang].moreText;
+  document.getElementById("footer-text").textContent = translations[lang].footerText;
+
+  document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("active"));
+  document.querySelector(`[onclick="setLanguage('${lang}')"]`).classList.add("active");
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  let savedLanguage = "hu";
+
+  try {
+    savedLanguage = localStorage.getItem("selectedLanguage") || "hu";
+  } catch (e) {}
+
+  setLanguage(savedLanguage);
+});
+</script>
+    
+</body>
+</html>
